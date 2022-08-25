@@ -140,6 +140,6 @@ if ($this->uri->segment(2) == "layout_transparent") {
   $this->load->view('dist/_partials/navbar');
 }elseif ($this->uri->segment(2) != "auth_login" && $this->uri->segment(1) != "" && $this->uri->segment(2) != "auth_forgot_password"&& $this->uri->segment(2) != "auth_register" && $this->uri->segment(2) != "auth_reset_password" && $this->uri->segment(2) != "errors_503" && $this->uri->segment(2) != "errors_403" && $this->uri->segment(2) != "errors_404" && $this->uri->segment(2) != "errors_500" && $this->uri->segment(2) != "utilities_contact" && $this->uri->segment(2) != "utilities_subscribe") {
   $this->load->view('dist/_partials/layout');
-  $this->load->view('dist/_partials/sidebar');
+  $this->load->view('dist/_partials/sidebar3');
 }
 ?>

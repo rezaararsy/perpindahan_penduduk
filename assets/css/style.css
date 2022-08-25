@@ -665,7 +665,7 @@ select.form-control:not([size]):not([multiple]) {
           padding-right: 13px !important; }
           .card .card-header h4 + .card-header-action .btn.active,
           .card .card-header h4 + .card-header-form .btn.active {
-            box-shadow: 0 2px 6px #acb5f6;
+            box-shadow: 0 2px 6px #002544;
             background-color: #002544;
             color: #fff; }
         .card .card-header h4 + .card-header-action .dropdown,
@@ -1029,7 +1029,7 @@ table tr:hover .table-links {
   .nav-pills .nav-item .nav-link:hover {
     background-color: #f6f7fe; }
   .nav-pills .nav-item .nav-link.active {
-    box-shadow: 0 2px 6px #acb5f6;
+    box-shadow: 0 2px 6px #002544;
     color: #fff;
     background-color: #002544; }
   .nav-pills .nav-item .nav-link .badge {
@@ -1303,15 +1303,15 @@ h6 .badge {
   color: #fff !important; }
 
 .btn-primary, .btn-primary.disabled {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #002544;
   background-color: #002544;
   border-color: #002544; }
   .btn-primary:focus, .btn-primary.disabled:focus {
-    background-color: #394eea !important; }
+    background-color: #0359a1 !important; }
     .btn-primary:focus:active, .btn-primary.disabled:focus:active {
-      background-color: #394eea !important; }
+      background-color: #0359a1 !important; }
   .btn-primary:active, .btn-primary:hover, .btn-primary.disabled:active, .btn-primary.disabled:hover {
-    background-color: #394eea !important; }
+    background-color: #0359a1 !important; }
 
 .btn-outline-primary, .btn-outline-primary.disabled {
   border-color: #002544;
@@ -1451,7 +1451,7 @@ h6 .badge {
     .accordion .accordion-header:hover {
       background-color: #f2f2f2; }
     .accordion .accordion-header[aria-expanded="true"] {
-      box-shadow: 0 2px 6px #acb5f6;
+      box-shadow: 0 2px 6px #002544;
       background-color: #002544;
       color: #fff; }
   .accordion .accordion-body {
@@ -2131,7 +2131,7 @@ pre {
   height: 350px; }
 
 .shadow-primary {
-  box-shadow: 0 2px 6px #acb5f6; }
+  box-shadow: 0 2px 6px #002544; }
 
 .shadow-secondary {
   box-shadow: 0 2px 6px #e1e5e8; }
@@ -2390,7 +2390,7 @@ body.sidebar-mini .main-sidebar {
       body.sidebar-mini .main-sidebar .sidebar-menu > li > a.has-dropdown:after {
         content: initial; }
     body.sidebar-mini .main-sidebar .sidebar-menu > li.active > a {
-      box-shadow: 0 4px 8px #acb5f6;
+      box-shadow: 0 4px 8px #002544;
       background-color: #002544;
       color: #fff; }
     body.sidebar-mini .main-sidebar .sidebar-menu > li ul.dropdown-menu {

@@ -1108,7 +1108,7 @@ tr:first-child > td > .fc-day-grid-event {
   box-shadow: none;
 }
 .swal-button.swal-button--confirm {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #002544;
   background-color: #002544;
 }
 .swal-button.swal-button--confirm:focus {
@@ -1500,7 +1500,7 @@ tr:first-child > td > .fc-day-grid-event {
   color: #002544;
 }
 .tickets .ticket-items .ticket-item.active {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #002544;
   border-radius: 3px;
   background-color: #002544;
   border-bottom: none;
@@ -1786,7 +1786,7 @@ tr:first-child > td > .fc-day-grid-event {
   color: #fff;
 }
 .pricing.pricing-highlight .pricing-cta a:hover {
-  background-color: #394eea !important;
+  background-color: #0359a1 !important;
 }
 .pricing .pricing-padding {
   padding: 40px;
@@ -2019,7 +2019,7 @@ tr:first-child > td > .fc-day-grid-event {
   background-color: #e3eaef;
 }
 .wizard-steps .wizard-step.wizard-step-active {
-  box-shadow: 0 2px 6px #acb5f6;
+  box-shadow: 0 2px 6px #002544;
   background-color: #002544;
   color: #fff;
 }
