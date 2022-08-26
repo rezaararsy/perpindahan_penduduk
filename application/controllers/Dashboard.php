@@ -5,9 +5,15 @@ class Dashboard extends CI_Controller {
 
 	public function index() {
 		$data = array(
-			'title' => "Ecommerce Dashboard"
+			'title' => "Dashboard"
 		);
 		$this->load->view('dashboard/dashboard', $data);
+	}
+	public function daftar_user() {
+		$data = array(
+			'title' => "Dashboard"
+		);
+		$this->load->view('dashboard/daftar_user', $data);
 	}
 
 }
