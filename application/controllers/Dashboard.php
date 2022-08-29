@@ -21,5 +21,11 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard/edit_user', $data);
 	}
+	public function add_pindah() {
+		$data = array(
+			'title' => "Dashboard"
+		);
+		$this->load->view('dashboard/add_data_perpindahan', $data);
+	}
 
 }
