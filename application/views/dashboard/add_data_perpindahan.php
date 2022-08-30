@@ -22,61 +22,73 @@ $this->load->view('dist/_partials/header1');
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Masukkan Data Diri</h4>
+                    <h4>Masukkan Perpindahan Penduduk</h4>
                   </div>
                   <div class="card-body">
                     <div class="form-group">
-                      <label>Nama Ketua RT</label>
+                      <label>Pilih Kecamatan</label>
+                      <select class="form-control">
+                        <option disabled selected value="">Pilih Kecamatan</option>
+                        <option value="">Blimbing</option>
+                        <option>Klojen</option>
+                        <option>Lowokwaru</option>
+                        <option>Kedungkandang</option>
+                        <option>Sukun</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Pilih Kelurahan</label>
+                      <select class="form-control">
+                      <option disabled selected value="">Pilih Kelurahan</option>
+                        <option value="">Dinoyo</option>
+                        <option>Merjosari</option>
+
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Pilih RW</label>
+                      <select class="form-control">
+                      <option disabled selected value="">Pilih RW</option>
+                        <option value="">1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Pilih RT</label>
+                      <select class="form-control">
+                      <option disabled selected value="">Pilih RT</option>
+                        <option value="">1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>NIK Penduduk Yang Pindah</label>
+                      <input type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Nama Penduduk Yang Pindah</label>
                       <input type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                      <label>Username</label>
+                      <label>Jenis Perpindahan</label>
+                      <select class="form-control">
+                      <option disabled selected value="">Pilih Jenis Perpindahan</option>
+                        <option value="">Pindah Masuk</option>
+                        <option>Pindah Keluar</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>No SKPWNI</label>
                       <input type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                      <label>Password</label>
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <i class="fas fa-lock"></i>
-                          </div>
-                        </div>
-                        <input type="password" class="form-control pwstrength" data-indicator="pwindicator">
-                      </div>
-                      <div id="pwindicator" class="pwindicator">
-                        <div class="bar"></div>
-                        <div class="label"></div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>Konfirmasi Password</label>
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text">
-                            <i class="fas fa-lock"></i>
-                          </div>
-                        </div>
-                        <input type="password" class="form-control pwstrength" data-indicator="pwindicator">
-                      </div>
-                      <div id="pwindicator" class="pwindicator">
-                        <div class="bar"></div>
-                        <div class="label"></div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>No RT</label>
-                      <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label>No RW</label>
-                      <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label>Kelurahan</label>
-                      <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <label>Kecamatan</label>
+                      <label>Alamat di RT</label>
                       <input type="text" class="form-control">
                     </div>
                     <div class="form-group">

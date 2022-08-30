@@ -27,5 +27,11 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard/add_data_perpindahan', $data);
 	}
+	public function data_pindah() {
+		$data = array(
+			'title' => "Dashboard"
+		);
+		$this->load->view('dashboard/data_pindah', $data);
+	}
 
 }
