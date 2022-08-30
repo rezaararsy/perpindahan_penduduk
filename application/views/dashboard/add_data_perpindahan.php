@@ -88,6 +88,10 @@ $this->load->view('dist/_partials/header1');
                       <input type="text" class="form-control">
                     </div>
                     <div class="form-group">
+                      <label>Tgl Pindah</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
                       <label>Alamat di RT</label>
                       <input type="text" class="form-control">
                     </div>
