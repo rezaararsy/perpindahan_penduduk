@@ -27,44 +27,34 @@ $this->load->view('dist/_partials/header1');
                   <div class="card-body">
                     <div class="form-group">
                       <label>Pilih Kecamatan</label>
-                      <select class="form-control">
+                      <select class="form-control" id="zoneSelect" onchange="updateChar()">
                         <option disabled selected value="">Pilih Kecamatan</option>
-                        <option value="">Blimbing</option>
-                        <option>Klojen</option>
-                        <option>Lowokwaru</option>
-                        <option>Kedungkandang</option>
-                        <option>Sukun</option>
+                        <option value="Blimbing">Blimbing</option>
+                        <option value="Klojen">Klojen</option>
+                        <option value="Lowokwaru">Lowokwaru</option>
+                        <option value="Kedungkandang">Kedungkandang</option>
+                        <option value="Sukun">Sukun</option>
                       </select>
                     </div>
                     <div class="form-group">
                       <label>Pilih Kelurahan</label>
-                      <select class="form-control">
+                      <select class="form-control" id="kelurahanya" onchange="updateChar2()">
                       <option disabled selected value="">Pilih Kelurahan</option>
-                        <option value="">Dinoyo</option>
-                        <option>Merjosari</option>
 
                       </select>
                     </div>
                     <div class="form-group">
                       <label>Pilih RW</label>
-                      <select class="form-control">
+                      <select class="form-control" id="rwnya">
                       <option disabled selected value="">Pilih RW</option>
-                        <option value="">1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+
                       </select>
                     </div>
                     <div class="form-group">
                       <label>Pilih RT</label>
-                      <select class="form-control">
+                      <select class="form-control" id="rtnya">
                       <option disabled selected value="">Pilih RT</option>
-                        <option value="">1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+
                       </select>
                     </div>
                     <div class="form-group">

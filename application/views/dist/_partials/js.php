@@ -2,6 +2,151 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
   <!-- General JS Scripts -->
+  <script>
+    var blimbing = ["Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi"];
+    var kedungkandang = ["Arjowinangun", "Bumiayu", "Buring", "Cemorokandang", "Kedungkandang", "Kotalama", "Lesanpuro", "Madyopuro", "Mergosono", "Sawojajar", "Tlogowaru", "Wonokoyo"];
+    var klojen = ["Bareng", "Gadingasri", "Kasin", "Kauman", "Kiduldalem", "Klojen", "Oro-Oro Dowo", "Penanggungan", "Rampal Celaket", "Samaan", "Sukoharjo"];
+    var lowokwaru = ["Dinoyo", "Jatimulyo", "Ketawanggede", "Lowokwaru", "Merjosari", "Mojolangu", "Sumbersari", "Tasikmadu", "Tlogomas", "Tulusrejo", "Tunggulwulung", "Tunjungsekar"];
+    var sukun = ["Bakalankrajan", "Bandulan", "Bandungrejosari", "Ciptomulyo", "Gadang", "Karangbesuki", "Kebonsari", "Mulyorejo", "Pisangcandi", "Sukun", "Tanjungrejo"];
+
+    var rtblimbing = [34, 45, 55, 147, 85, 70, 137, 74, 38, 157, 95];
+    var rwblimbing = [5, 7, 10, 21, 8, 12, 14, 7, 6, 24, 13];
+
+    var rtkedungkandang = [64, 57, 47, 63, 48, 141, 94, 133, 77, 120, 37, 27];
+    var rwkedungkandang = [10, 6, 9, 11, 7, 11, 11, 17, 6, 16, 8, 5];
+
+    var rtklojen = [78, 50, 96, 67, 49, 47, 97, 45, 35, 58, 57];
+    var rwklojen = [9, 6, 11, 10, 8, 7, 10, 8, 6, 8, 7];
+
+    var rtlowokwaru = [51, 80, 32, 104, 86, 117, 40, 33, 49, 75, 59, 73];
+    var rwlowokwaru = [7, 11, 5, 15, 12, 19, 7, 6, 9, 16, 6, 8];
+
+    var rtsukun = [49, 67, 129, 62, 72, 83, 46, 60, 87, 113, 138];
+    var rwsukun = [7, 8, 13, 5, 9, 9, 5, 7, 11, 9, 13];
+    var d = "";
+    var id = 0;
+    function updateChar() {
+    d = document.getElementById("zoneSelect").value;
+    // alert(d);
+    $("#kelurahanya").empty();
+    $("#rwnya").empty();
+    $("#rtnya").empty();
+    if(d=="Blimbing"){
+      $.each(blimbing, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(value)); 
+    });
+    updateChar2();
+    }else if(d=="Kedungkandang"){
+      $.each(kedungkandang, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(value)); 
+    });
+    updateChar2();
+    }else if(d=="Klojen"){
+      $.each(klojen, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(value)); 
+    });
+    updateChar2();
+    }else if(d=="Lowokwaru"){
+      $.each(lowokwaru, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(value)); 
+    });
+    updateChar2();
+    }else if(d=="Sukun"){
+      $.each(sukun, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(value)); 
+    });
+    updateChar2();
+    }
+    
+}
+function updateChar2() {
+  id = document.getElementById("kelurahanya").value;
+  $("#rwnya").empty();
+    $("#rtnya").empty();
+  if(d=="Blimbing"){
+      for(var i = 1; i<=rwblimbing[id];i++){
+        $('#rwnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+      for(var i = 1; i<=rtblimbing[id];i++){
+        $('#rtnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+    }else if(d=="Kedungkandang"){
+      for(var i = 1; i<=rwkedungkandang[id];i++){
+        $('#rwnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+      for(var i = 1; i<=rtkedungkandang[id];i++){
+        $('#rtnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+    }else if(d=="Klojen"){
+      for(var i = 1; i<=rwklojen[id];i++){
+        $('#rwnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+      for(var i = 1; i<=rtklojen[id];i++){
+        $('#rtnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+    }else if(d=="Lowokwaru"){
+      for(var i = 1; i<=rwlowokwaru[id];i++){
+        $('#rwnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+      for(var i = 1; i<=rtlowokwaru[id];i++){
+        $('#rtnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+    
+    }else if(d=="Sukun"){
+      for(var i = 1; i<=rwsukun[id];i++){
+        $('#rwnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+      for(var i = 1; i<=rtsukun[id];i++){
+        $('#rtnya')
+         .append($("<option></option>")
+                    .attr("value", i)
+                    .text(i)); 
+      }
+    }
+}
+  </script>
   <script src="<?php echo base_url(); ?>assets/modules/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/modules/popper.js"></script>
   <script src="<?php echo base_url(); ?>assets/modules/tooltip.js"></script>
