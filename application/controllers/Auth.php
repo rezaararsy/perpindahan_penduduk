@@ -29,8 +29,8 @@ class Auth extends CI_Controller {
 	{	
 		// redirect(base_url("dashboard"));
 		//blimbng 1 klojen 2 lowokwaru 3 kedungkandang 4 kedungkandang 5
-		//blimbing-arjosari-rw1-rt1 1111
-		// password blimbing111
+		//blimbing-arjosari-rw1-rt1 = 101011 = xyymmm
+		// password blimbing01011 = kecamatan-rt-rw
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
 		$kedungkandang = array("Arjowinangun", "Bumiayu", "Buring", "Cemorokandang", "Kedungkandang", "Kotalama", "Lesanpuro", "Madyopuro", "Mergosono", "Sawojajar", "Tlogowaru", "Wonokoyo");
 		$klojen = array("Bareng", "Gadingasri", "Kasin", "Kauman", "Kiduldalem", "Klojen", "Oro-Oro Dowo", "Penanggungan", "Rampal Celaket", "Samaan", "Sukoharjo");
