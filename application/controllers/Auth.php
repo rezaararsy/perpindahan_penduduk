@@ -29,8 +29,9 @@ class Auth extends CI_Controller {
 	{	
 		// redirect(base_url("dashboard"));
 		//blimbng 1 klojen 2 lowokwaru 3 kedungkandang 4 kedungkandang 5
-		//blimbing-arjosari-rw1-rt1 = 101011 = xyymmm
+		//blimbing-arjosari-rw1-rt1 = 10101011 = xzzyymmm
 		// password blimbing01011 = kecamatan-rt-rw
+		// password sementara = malangku
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
 		$kedungkandang = array("Arjowinangun", "Bumiayu", "Buring", "Cemorokandang", "Kedungkandang", "Kotalama", "Lesanpuro", "Madyopuro", "Mergosono", "Sawojajar", "Tlogowaru", "Wonokoyo");
 		$klojen = array("Bareng", "Gadingasri", "Kasin", "Kauman", "Kiduldalem", "Klojen", "Oro-Oro Dowo", "Penanggungan", "Rampal Celaket", "Samaan", "Sukoharjo");
@@ -55,6 +56,14 @@ class Auth extends CI_Controller {
 
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
+
+		$kecamatanya = substr($username,0,1);
+		$kelurahanya = substr($username,1,2);
+		$rwnya = substr($username,3,2);
+		$rtnya = substr($username,5,3);
+
+		
+
 		$where = array(
 			'username' => $username,
 			'password' => md5($password)
