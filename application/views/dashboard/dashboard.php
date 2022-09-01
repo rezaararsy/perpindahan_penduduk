@@ -21,7 +21,7 @@ $this->load->view('dist/_partials/header1');
                     <h4>Pindah Masuk</h4>
                   </div>
                   <div class="card-body">
-                    10
+                  <?php echo $masuk; ?> 
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ $this->load->view('dist/_partials/header1');
                     <h4>Pindah Keluar</h4>
                   </div>
                   <div class="card-body">
-                    42
+                  <?php echo $keluar; ?> 
                   </div>
                 </div>
               </div>

@@ -7,7 +7,7 @@ $this->load->view('dist/_partials/header1');
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Data Perpindahan Penduduk RT 1 RW 2 Kelurahan Dinoyo Kecamatan Lowokwaru</h1>
+            <h1>Data Perpindahan Penduduk Kota Malang</h1>
 
           </div>
 

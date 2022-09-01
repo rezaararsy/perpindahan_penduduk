@@ -15,9 +15,12 @@ class Dashboard extends CI_Controller {
 	  }
 
 	public function index() {
+		
 		$data = array(
-			'title' => "Dashboard"
+			'title' => "Dashboard",
 		);
+		$data['masuk'] = $this->m_data->get_masuk();
+		$data['keluar'] = $this->m_data->get_keluar();
 		$this->load->view('dashboard/dashboard', $data);
 	}
 	public function daftar_user() {
@@ -38,13 +41,7 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard/add_data_perpindahan', $data);
 	}
-	public function ubah_pindah() {
 
-		$data = array(
-			'title' => "Dashboard"
-		);
-		$this->load->view('dashboard/edit_data_perpindahan', $data);
-	}
 	public function data_pindah() {
 		$data = array(
 			'title' => "Dashboard"

@@ -25,4 +25,13 @@ class M_Data extends CI_Model
     $hasil=$this->db->query("SELECT * FROM perpindahan WHERE id_perpindahan='$id'");
         return $hasil->result();
   }
+
+  function get_masuk(){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=1");
+        return $hasil->num_rows();
+  }
+  function get_keluar(){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=2");
+        return $hasil->num_rows();
+  }
 }
