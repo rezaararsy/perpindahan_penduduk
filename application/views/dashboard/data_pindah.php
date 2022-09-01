@@ -29,6 +29,10 @@ $this->load->view('dist/_partials/header1');
                               #
                             </th>
                             <th>Nama Penduduk</th>
+                            <th>Kecamatan</th>
+                            <th>Kelurahan</th>
+                            <th>RW</th>
+                            <th>RT</th>
                             <th>Alamat di RT</th>
                             <th>Tgl Pindah</th>
                             <th>Jenis Perpindahan</th>

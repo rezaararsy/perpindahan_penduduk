@@ -406,6 +406,40 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                       columns: [
                             {"data": "id_perpindahan"},
                             {"data": "nama"},
+                            {"data": "kecamatan",
+                            render: function (data, type, row, meta) {
+                                if(data==1){
+                                  return 'Blimbing';
+                                }else if(data==2){
+                                  return 'Klojen';
+                                }else if(data==3){
+                                  return 'Lowokwaru';
+                                }else if(data==4){
+                                  return 'Kedungkandang';
+                                }else if(data==5){
+                                  return 'Sukun';
+                                }
+                            }},
+                            {"data": "kelurahan",
+                            render: function (data, type, row, meta) {
+                              if(row['kecamatan']==1){
+                                return blimbing[data];
+                            
+                              }else if(row['kecamatan']==2){
+                                return klojen[data];
+                             
+                              }else if(row['kecamatan']==3){
+                                return lowokwaru[data];
+                             
+                              }else if(row['kecamatan']==4){
+                                return kedungkandang[data];
+                             
+                              }else if(row['kecamatan']==5){
+                                return sukun[data];
+                              }
+                            }},
+                            {"data": "rw"},
+                            {"data": "rt"},
                             {"data": "alamat_rt"},
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
@@ -419,7 +453,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {
                     "data": "alamat_rt",
                     render: function (data, type, row, meta) {
-                        return '<td><a href="javascript:void(0);" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
+                        return '<td><a href="javascript:void(0);" data-kecamatan="'+row['kecamatan']+'" data-kelurahan="'+row['kelurahan']+'" data-rw="'+row['rw']+'" data-rt="'+row['rt']+'" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
                     }
                 },
                       ]
@@ -434,13 +468,14 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
 
             $('#table_id').on('click','.edit_record',function(){
               console.log("Jalan");
+              updateChar();
                 var id_perpindahan=$(this).data('kode');
-                var nama=$(this).data('nama');
-                var alamat_rt=$(this).data('alamat_rt');
+                var kecamatan=$(this).data('kecamatan');               
+                var kelurahan=$(this).data('kelurahan');
                 var tgl_pindah=$(this).data('tgl_pindah');
                 $('#ModalUpdate').modal('show');
-                $('[name="id_perpindahan"]').val(id_perpindahan);
-                $('[name="nama"]').val(nama);
+                $('[name="kecamatan"]').val(kecamatan);
+                $('[name="kelurahan"]').val(kelurahan);
                 $('[name="alamat_rt"]').val(alamat_rt);
                 $('[name="alamat_rt"]').val(alamat_rt);
           });
