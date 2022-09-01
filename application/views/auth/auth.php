@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$this->load->view('dist/_partials/header');
+$this->load->view('dist/_partials/header1');
 ?>
 <body>
   <div id="app">
@@ -19,7 +19,7 @@ $this->load->view('dist/_partials/header');
                 <form method="POST" action="<?php echo base_url(). 'auth/login_auth'; ?>" class="needs-validation" novalidate="">
                   <div class="form-group">
                     <label for="email">Username</label>
-                    <input id="email" type="text" class="form-control" name="username" tabindex="1" required autofocus>
+                    <input id="text" type="text" class="form-control" name="username" tabindex="1" required autofocus>
                     <div class="invalid-feedback">
                       Please fill in your username
                     </div>
@@ -53,7 +53,7 @@ $this->load->view('dist/_partials/header');
                     </button>
                   </div>
                 </form>
-                
+                <center><h6><?php echo $this->session->flashdata('message');?></h6></center>
 
               </div>
             </div>

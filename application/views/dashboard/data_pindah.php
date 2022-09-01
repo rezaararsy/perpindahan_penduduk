@@ -22,7 +22,7 @@ $this->load->view('dist/_partials/header1');
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table class="table table-striped" id="table-1">
+                      <table class="table table-striped" id="table_id" style="width:100%">
                         <thead>                                 
                           <tr>
                             <th class="text-center">
@@ -35,7 +35,7 @@ $this->load->view('dist/_partials/header1');
                             <th>Action</th>
                           </tr>
                         </thead>
-                        <tbody>                                 
+                        <!-- <tbody>                                 
                           <tr>
                             <td>
                               1
@@ -51,7 +51,7 @@ $this->load->view('dist/_partials/header1');
                             <td><a href="#" class="btn btn-primary">Action</a></td>
                           </tr>
 
-                        </tbody>
+                        </tbody> -->
                       </table>
                     </div>
                   </div>

@@ -2,6 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
+	function __construct()
+	  {
+	    parent::__construct();
+	    $this->load->model('m_data');
+	    $this->load->helper('url');
+		$this->load->library('datatables');
+	    if($this->session->userdata('status') != "login"){
+		   redirect('');
+		  }
+
+	  }
 
 	public function index() {
 		$data = array(
@@ -32,6 +43,42 @@ class Dashboard extends CI_Controller {
 			'title' => "Dashboard"
 		);
 		$this->load->view('dashboard/data_pindah', $data);
+	}
+
+	public function data_json_perpindahan(){
+		header('Content-Type: application/json');
+		echo $this->m_data->getDataPerpindahan();
+	}
+
+	public function inputData()
+	{
+		$kecamatan = $this->input->post('kecamatan');
+		$kelurahan = $this->input->post('kelurahan');
+		$rw = $this->input->post('rw');
+		$rt = $this->input->post('rt');
+		$nik = $this->input->post('nik');
+		$nama = $this->input->post('nama');
+		$jenis_pindah = $this->input->post('jenis_pindah');
+		$skpwni = $this->input->post('skpwni');
+		$tgl_pindah = $this->input->post('tgl_pindah');
+		$alamat_rt = $this->input->post('alamat_rt');
+		$data = array(
+		'kecamatan' => $kecamatan,
+		'kelurahan' => $kelurahan,
+		'rw' => $rw,
+		'rt' => $rt,
+		'nik' => $nik,
+		'nama' => $nama,
+		'jenis_pindah' => $jenis_pindah,
+		'skpwni' => $skpwni,
+		'tgl_pindah' => $tgl_pindah,
+		'alamat_rt' => $alamat_rt
+		);
+
+		$this->m_data->input_data($data,'perpindahan');
+
+		$this->session->set_flashdata('message', 'Anda berhasil menginput data');
+		redirect(base_url("dashboard"));
 	}
 
 }
