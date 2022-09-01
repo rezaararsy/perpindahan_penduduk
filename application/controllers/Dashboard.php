@@ -38,6 +38,13 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard/add_data_perpindahan', $data);
 	}
+	public function ubah_pindah() {
+
+		$data = array(
+			'title' => "Dashboard"
+		);
+		$this->load->view('dashboard/edit_data_perpindahan', $data);
+	}
 	public function data_pindah() {
 		$data = array(
 			'title' => "Dashboard"
@@ -49,6 +56,14 @@ class Dashboard extends CI_Controller {
 		header('Content-Type: application/json');
 		echo $this->m_data->getDataPerpindahan();
 	}
+
+	function deleteData(){ 
+        $kode=$this->input->post('id_perpindahan');
+        $this->db->where('id_perpindahan',$kode);
+        $this->db->delete('perpindahan');
+        $this->session->set_flashdata('message', 'Data Berhasil di Hapus');
+		redirect(base_url("dashboard"));    
+    }
 
 	public function inputData()
 	{

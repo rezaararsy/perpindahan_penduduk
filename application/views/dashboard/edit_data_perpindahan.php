@@ -22,7 +22,7 @@ $this->load->view('dist/_partials/header1');
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Masukkan Perpindahan Penduduk</h4>
+                    <h4>Ubah Perpindahan Penduduk</h4>
                   </div>
                   <div class="card-body">
                     <div class="form-group">
@@ -96,6 +96,4 @@ $this->load->view('dist/_partials/header1');
           </div>
         </section>
       </div>
-
-      
 <?php $this->load->view('dist/_partials/footer'); ?>

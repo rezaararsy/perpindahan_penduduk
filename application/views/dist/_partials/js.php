@@ -238,7 +238,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
   <!-- Template JS File -->
   <script src="<?php echo base_url(); ?>assets/js/scripts.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/custom.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
@@ -405,31 +405,45 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                       ajax: {"url": "<?php echo base_url().'dashboard/data_json_perpindahan'?>", "type": "POST"},
                       columns: [
                             {"data": "id_perpindahan"},
-                            {"data": "kecamatan"},
-                            {"data": "kelurahan"},
-                            {"data": "rw"},
-                            {"data": "rt"}
+                            {"data": "nama"},
+                            {"data": "alamat_rt"},
+                            {"data": "tgl_pindah"},
+                            {"data": "jenis_pindah",
+                            render: function (data, type, row, meta) {
+                                if(data==1){
+                                  return 'Pindah Masuk';
+                                }else{
+                                  return 'Pindah Keluar';
+                                }
+                            }},
+                            {
+                    "data": "alamat_rt",
+                    render: function (data, type, row, meta) {
+                        return '<td><a href="javascript:void(0);" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
+                    }
+                },
                       ]
                 });
             } );
 
-          //   $('#table_id').on('click','.hapus_record',function(){
-          //           var kode=$(this).data('kode');
-          //           $('#ModalHapus').modal('show');
-          //           $('[name="id"]').val(kode);
-          //     });
+            $('#table_id').on('click','.hapus_record',function(){
+                    var id_perpindahan=$(this).data('kode');
+                    $('#ModalHapus').modal('show');
+                    $('[name="id_perpindahan"]').val(id_perpindahan);
+              });
 
-          //   $('#table_id').on('click','.edit_record',function(){
-          //       var kode=$(this).data('kode');
-          //       var nama=$(this).data('nama');
-          //       var jml=$(this).data('jml');
-          //       var harga=$(this).data('harga');
-          //       $('#ModalUpdate').modal('show');
-          //       $('[name="id"]').val(kode);
-          //       $('[name="nama_produk"]').val(nama);
-          //       $('[name="jml"]').val(jml);
-          //       $('[name="harga"]').val(harga);
-          // });
+            $('#table_id').on('click','.edit_record',function(){
+              console.log("Jalan");
+                var id_perpindahan=$(this).data('kode');
+                var nama=$(this).data('nama');
+                var alamat_rt=$(this).data('alamat_rt');
+                var tgl_pindah=$(this).data('tgl_pindah');
+                $('#ModalUpdate').modal('show');
+                $('[name="id_perpindahan"]').val(id_perpindahan);
+                $('[name="nama"]').val(nama);
+                $('[name="alamat_rt"]').val(alamat_rt);
+                $('[name="alamat_rt"]').val(alamat_rt);
+          });
   </script>
 </body>
 </html>

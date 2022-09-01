@@ -61,4 +61,108 @@ $this->load->view('dist/_partials/header1');
           </div>
         </section>
       </div>
+
+      <form id="add-row-form" action="<?php echo base_url().'dashboard/update'?>" method="post"
+        enctype="multipart/form-data">
+        <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <label>Pilih Kecamatan</label>
+                        <select required name="kecamatan" class="form-control" id="zoneSelect" onchange="updateChar()">
+                          <option disabled selected value="">Pilih Kecamatan</option>
+                          <option value="1">Blimbing</option>
+                          <option value="2">Klojen</option>
+                          <option value="3">Lowokwaru</option>
+                          <option value="4">Kedungkandang</option>
+                          <option value="5">Sukun</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Pilih Kelurahan</label>
+                        <select required name="kelurahan" class="form-control" id="kelurahanya" onchange="updateChar2()">
+                        <option disabled selected value="">Pilih Kelurahan</option>
+  
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Pilih RW</label>
+                        <select required name="rw" class="form-control" id="rwnya">
+                        <option disabled selected value="">Pilih RW</option>
+  
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Pilih RT</label>
+                        <select required name="rt" class="form-control" id="rtnya">
+                        <option disabled selected value="">Pilih RT</option>
+  
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>NIK Penduduk Yang Pindah</label>
+                        <input required name="nik" type="number" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Nama Penduduk Yang Pindah</label>
+                        <input required name="nama" type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Jenis Perpindahan</label>
+                        <select required name="jenis_pindah" class="form-control">
+                        <option disabled selected value="">Pilih Jenis Perpindahan</option>
+                          <option value="1">Pindah Masuk</option>
+                          <option value="2">Pindah Keluar</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>No SKPWNI</label>
+                        <input required name="skpwni" type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Tgl Pindah</label>
+                        <input required name="tgl_pindah" type="date" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Alamat di RT</label>
+                        <input required name="alamat_rt" type="text" class="form-control">
+                      </div>   
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" id="add-row" class="btn btn-success">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <form id="add-row-form" action="<?php echo base_url().'dashboard/deleteData'?>" method="post">
+      <div class="modal fade" id="ModalHapus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                              aria-hidden="true">&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                      <input type="hidden" name="id_perpindahan" class="form-control" required>
+                      <strong>Anda yakin mau menghapus data ini?</strong>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="submit" id="add-row" class="btn btn-success">Hapus</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
 <?php $this->load->view('dist/_partials/footer'); ?>
