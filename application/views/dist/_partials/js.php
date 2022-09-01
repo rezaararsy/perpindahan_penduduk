@@ -277,6 +277,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     var d = "";
     var id = 0;
     function updateChar() {
+      console.log("Berjalan");
     d = document.getElementById("zoneSelect").value;
     // alert(d);
     $("#kelurahanya").empty();
@@ -482,6 +483,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                 var tgl_pindah=$(this).data('tgl_pindah');
                 var alamat_rt=$(this).data('alamat_rt');
                 $('#ModalUpdate').modal('show');
+                $('[name="id_perpindahan"]').val(id_perpindahan);
                 $('[name="kecamatan"]').val(kecamatan);
                 $('[name="kelurahan"]').val(kelurahan);
                 $('[name="rw"]').val(rw);

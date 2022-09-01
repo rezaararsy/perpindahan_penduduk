@@ -77,6 +77,7 @@ $this->load->view('dist/_partials/header1');
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
+                      <input type="hidden" name="id_perpindahan" class="form-control" required>
                       <div class="form-group">
                         <label>Pilih Kecamatan</label>
                         <select required name="kecamatan" class="form-control" id="zoneSelect" onchange="updateChar()">
