@@ -13,15 +13,23 @@ class Pengguna extends CI_Controller {
 		  }
 
 	  }
-      
+
 	public function index() {
 		
 		$data = array(
 			'title' => "Dashboard",
 		);
-		$data['masuk'] = $this->m_data->get_masuk();
-		$data['keluar'] = $this->m_data->get_keluar();
+        $rt= $this->session->userdata('rt');
+        $rw=$this->session->userdata('rw');
+        $kelurahan=$this->session->userdata('kelurahan');
+        $kecamatan=$this->session->userdata('kecamatan');
+		$data['masuk'] = $this->m_data->get_masuk1($rt,$rw,$kelurahan,$kecamatan);
+		$data['keluar'] = $this->m_data->get_keluar1($rt,$rw,$kelurahan,$kecamatan);
 		$this->load->view('pengguna/pengguna', $data);
+        // $datam = $this->m_data->get_masuk1($rt,$rw,$kelurahan,$kecamatan);
+		// $datak = $this->m_data->get_keluar1($rt,$rw,$kelurahan,$kecamatan);
+        // echo $datam;
+        // echo $datak;
 	}
 
 
@@ -33,7 +41,11 @@ class Pengguna extends CI_Controller {
 	}
 	public function data_json_perpindahan(){
 		header('Content-Type: application/json');
-		echo $this->m_data->getDataPerpindahan();
+        $rt= $this->session->userdata('rt');
+        $rw=$this->session->userdata('rw');
+        $kelurahan=$this->session->userdata('kelurahan');
+        $kecamatan=$this->session->userdata('kecamatan');
+		echo $this->m_data->getDataPerpindahan2($rt,$rw,$kelurahan,$kecamatan);
 	}
 
 

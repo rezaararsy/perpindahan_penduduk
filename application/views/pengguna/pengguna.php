@@ -6,7 +6,7 @@ $this->load->view('dist/_partials/header1');
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Dashboard</h1>
+            <h1>Dashboard <?php echo $this->session->userdata('nama'); ?></h1>
             
           </div>
           <h4><?php echo $this->session->flashdata('message');?></h4>

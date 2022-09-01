@@ -7,7 +7,7 @@ $this->load->view('dist/_partials/header1');
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Data Perpindahan Penduduk Kota Malang</h1>
+            <h1>Data Perpindahan Penduduk <?php echo $this->session->userdata('nama'); ?></h1>
 
           </div>
 
@@ -22,7 +22,7 @@ $this->load->view('dist/_partials/header1');
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
-                      <table class="table table-striped" id="table_id" style="width:100%">
+                      <table class="table table-striped" id="table_id2" style="width:100%">
                         <thead>                                 
                           <tr>
                             <th class="text-center">
@@ -36,7 +36,6 @@ $this->load->view('dist/_partials/header1');
                             <th>Alamat di RT</th>
                             <th>Tgl Pindah</th>
                             <th>Jenis Perpindahan</th>
-                            <th>Action</th>
                           </tr>
                         </thead>
                         <!-- <tbody>                                 

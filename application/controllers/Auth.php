@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 	{	
 		// redirect(base_url("dashboard"));
 		//blimbng 1 klojen 2 lowokwaru 3 kedungkandang 4 kedungkandang 5
-		//blimbing-arjosari-rw1-rt1 = 10101011 = xzzyymmm
+		//blimbing-arjosari-rw1-rt1 = 10001011 = xzzyymmm
 		// password blimbing01011 = kecamatan-rt-rw
 		// password sementara = malangku
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
@@ -63,6 +63,28 @@ class Auth extends CI_Controller {
 		$rtnya = (int) substr($username,5,3);
 
 
+		$user_kecamatan = "";
+		
+		if($kecamatanya == 1){
+			$user_kecamatan = "Blimbing";
+			$nama_user =  "$user_kecamatan $blimbing[$kelurahanya] RW $rwnya RT $rtnya";
+		}elseif($kecamatanya == 2){
+			$user_kecamatan = "Klojen";
+			$nama_user =  "$user_kecamatan $klojen[$kelurahanya] RW $rwnya RT $rtnya";
+		}elseif($kecamatanya == 3){
+			$user_kecamatan = "Lowokwaru";
+			$nama_user =  "$user_kecamatan $lowokwaru[$kelurahanya] RW $rwnya RT $rtnya";
+		}elseif($kecamatanya == 4){
+			$user_kecamatan = "Kedungkandang";
+			$nama_user =  "$user_kecamatan $kedungkandang[$kelurahanya] RW $rwnya RT $rtnya";
+		}elseif($kecamatanya == 5){
+			$user_kecamatan = "Sukun";
+			$nama_user =  "$user_kecamatan $sukun[$kelurahanya] RW $rwnya RT $rtnya";
+		}
+
+
+		
+
 		// echo $kecamatanya;
 		// echo "<br>";
 		// echo $kelurahanya;
@@ -90,12 +112,22 @@ class Auth extends CI_Controller {
 					redirect(base_url("dashboard"));
 				}				
 				elseif($role == 102){
-				redirect(base_url("pengguna"));		
+					redirect(base_url("pengguna"));		
 				}
 			}elseif($password == "malangkota1987"){
-				$this->session->set_flashdata('message', 'Username atau Password Salah');
+				$data_session = array(
+					'nama' => $nama_user,
+					'role' => 102,
+					'id_user' => $nama_user,
+					'status' => "login",
+					'kecamatan' => $kecamatanya,
+					'kelurahan' => $kelurahanya,
+					'rw' => $rwnya,
+					'rt' => $rtnya,
+					);
+				$this->session->set_userdata($data_session);
 				redirect(base_url("pengguna"));			
-				}
+			}
 			else{
 			$this->session->set_flashdata('message', 'Username atau Password Salah');
 				redirect("auth/login");			
