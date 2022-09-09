@@ -8,12 +8,21 @@ class M_Data extends CI_Model
     function __construct()
   {
     parent::__construct();
+    $this->load->database();
   }
   function cek_login($table,$where){
     return $this->db->get_where($table,$where);
   }
   function input_data($data,$table){
     $this->db->insert($table,$data);
+  }
+  public function insertImport($data) {
+    $res = $this->db->insert_batch('perpindahan',$data);
+    if($res){
+    return TRUE;
+    }else{
+    return FALSE;
+    }
   }
   function getDataPerpindahan(){
     $this->datatables->select('id_perpindahan,kecamatan,kelurahan,rw,rt,nik,nama,jenis_pindah,skpwni,tgl_pindah,alamat_rt');

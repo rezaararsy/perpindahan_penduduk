@@ -57,10 +57,10 @@ $this->load->view('dist/_partials/header1');
 
                       </select>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label>NIK Penduduk Yang Pindah</label>
                       <input required name="nik" type="number" class="form-control">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                       <label>Nama Penduduk Yang Pindah</label>
                       <input required name="nama" type="text" class="form-control">
