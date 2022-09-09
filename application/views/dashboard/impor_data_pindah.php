@@ -32,8 +32,7 @@ $this->load->view('dist/_partials/header1');
                     <h5>Kode Panduan Kecamatan, Kelurahan, Dan RT</h5>
                     <a href="<?php echo base_url(); ?>panduan.xlsx"><button type="submit" class="btn btn-primary">Download Panduan</button></a>
                     <br><br>
-                    <h6>Kode Pindah Masuk = 1</h6><br>
-                    <h6>Kode Pindah Keluar = 2</h6><br>
+                    <img src="<?php echo base_url(); ?>assets/panduan.png" alt="logo" width="80%" class="">
                   </div>
                 </div>
               </div>
