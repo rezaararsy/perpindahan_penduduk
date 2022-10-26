@@ -6,7 +6,7 @@ $this->load->view('dist/_partials/header1');
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Tambah Perpindahan Penduduk</h1>
+            <h1>Tambah Perpindahan Penduduk Keluar</h1>
             <!-- <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
               <div class="breadcrumb-item"><a href="#">Forms</a></div>
@@ -17,7 +17,7 @@ $this->load->view('dist/_partials/header1');
           <div class="section-body">
             <!-- <h2 class="section-title">Advanced Forms</h2>
             <p class="section-lead">We provide advanced input fields, such as date picker, color picker, and so on.</p> -->
-            <form action="<?php echo base_url(). 'dashboard/inputData'; ?>" method="post">
+            <form action="<?php echo base_url(). 'dashboard/inputData1'; ?>" method="post">
             <div class="row">
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
@@ -65,20 +65,20 @@ $this->load->view('dist/_partials/header1');
                       <label>Nama Penduduk Yang Pindah</label>
                       <input required name="nama" type="text" class="form-control">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label>Jenis Perpindahan</label>
                       <select required name="jenis_pindah" class="form-control">
                       <option disabled selected value="">Pilih Jenis Perpindahan</option>
                         <option value="1">Pindah Masuk</option>
                         <option value="2">Pindah Keluar</option>
                       </select>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                       <label>No SKPWNI</label>
                       <input required name="skpwni" type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                      <label>Tgl Pindah</label>
+                      <label>Tgl Pindah Keluar</label>
                       <input required name="tgl_pindah" type="date" class="form-control">
                     </div>
                     <div class="form-group">

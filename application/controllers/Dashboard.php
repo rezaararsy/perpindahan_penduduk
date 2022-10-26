@@ -38,11 +38,18 @@ class Dashboard extends CI_Controller {
 		);
 		$this->load->view('dashboard/edit_user', $data);
 	}
-	public function add_pindah() {
+	public function add_pindah_datang() {
 		$data = array(
 			'title' => "Dashboard"
 		);
-		$this->load->view('dashboard/add_data_perpindahan', $data);
+		$this->load->view('dashboard/add_data_perpindahan_datang', $data);
+	}
+
+	public function add_pindah_keluar() {
+		$data = array(
+			'title' => "Dashboard"
+		);
+		$this->load->view('dashboard/add_data_perpindahan_keluar', $data);
 	}
 
 	public function data_pindah() {
@@ -81,7 +88,37 @@ class Dashboard extends CI_Controller {
 		$rt = $this->input->post('rt');
 		$nik = 0;
 		$nama = $this->input->post('nama');
-		$jenis_pindah = $this->input->post('jenis_pindah');
+		$jenis_pindah =1;
+		$skpwni = $this->input->post('skpwni');
+		$tgl_pindah = $this->input->post('tgl_pindah');
+		$alamat_rt = $this->input->post('alamat_rt');
+		$data = array(
+		'kecamatan' => $kecamatan,
+		'kelurahan' => $kelurahan,
+		'rw' => $rw,
+		'rt' => $rt,
+		'nik' => $nik,
+		'nama' => $nama,
+		'jenis_pindah' => $jenis_pindah,
+		'skpwni' => $skpwni,
+		'tgl_pindah' => $tgl_pindah,
+		'alamat_rt' => $alamat_rt
+		);
+
+		$this->m_data->input_data($data,'perpindahan');
+
+		$this->session->set_flashdata('message', 'Anda berhasil menginput data');
+		redirect(base_url("dashboard"));
+	}
+	public function inputData1()
+	{
+		$kecamatan = $this->input->post('kecamatan');
+		$kelurahan = $this->input->post('kelurahan');
+		$rw = $this->input->post('rw');
+		$rt = $this->input->post('rt');
+		$nik = 0;
+		$nama = $this->input->post('nama');
+		$jenis_pindah = 2;
 		$skpwni = $this->input->post('skpwni');
 		$tgl_pindah = $this->input->post('tgl_pindah');
 		$alamat_rt = $this->input->post('alamat_rt');
