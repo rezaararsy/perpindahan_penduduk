@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 	{	
 		// redirect(base_url("dashboard"));
 		//blimbng 1 klojen 2 lowokwaru 3 kedungkandang 4 kedungkandang 5
-		//blimbing-arjosari-rw1-rt1 = 10001011 = xzzyymmm
+		//blimbing-arjosari-rw1-rt1 = 10001001 = xzzyymmm
 		// password blimbing01011 = kecamatan-rt-rw
 		// password sementara = malangku
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
