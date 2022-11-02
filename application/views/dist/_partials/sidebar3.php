@@ -4,21 +4,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?php echo base_url(); ?>">Pindah Penduduk</a>
+            <a href="<?php echo base_url(); ?>">E-PINDAD</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="<?php echo base_url(); ?>">PP</a>
+            <a href="<?php echo base_url(); ?>">E-P</a>
           </div>
           <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <!-- <li class="dropdown <?php echo $this->uri->segment(2) == '' || $this->uri->segment(2) == 'index' || $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"> -->
             <li class="dropdown active">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+              <a href="#" class="nav-link has-dropdown"><i class="fas fa-home"></i><span>Dashboard</span></a>
               <ul class="dropdown-menu">
               <li class="<?php echo $this->uri->segment(2) == 'dashboard' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dashboard">Home</a></li>
               <li class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dashboard/data_pindah">Perpindahan Penduduk</a></li>
-              <li style="margin-bottom: 20px;margin-top: 10px;" class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dashboard/add_pindah_datang">Tambah Data Perpindahan Datang</a></li>
-              <li style="margin-bottom: 20px;margin-top: 10px;" class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dashboard/add_pindah_keluar">Tambah Data Perpindahan Keluar</a></li>
+              <li style="margin-bottom: 30px;margin-top: 10px;" class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dashboard/add_pindah_datang">Tambah Data Perpindahan Datang</a></li>
+              <li style="margin-bottom: 30px;margin-top: 10px;" class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dashboard/add_pindah_keluar">Tambah Data Perpindahan Keluar</a></li>
               <li class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dashboard/impor_data_pindah">Impor Data Perpindahan</a></li>
                 <!-- <li class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dist/index_0">General Dashboard</a></li>
                 <li class="<?php echo $this->uri->segment(2) == '' || $this->uri->segment(2) == 'index' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dist/index">Ecommerce Dashboard</a></li> -->
