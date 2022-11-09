@@ -57,6 +57,10 @@ $this->load->view('dist/_partials/header1');
 
                       </select>
                     </div>
+                    <div class="form-group">
+                      <label>Alamat di RT</label>
+                      <input required name="alamat_rt" type="text" class="form-control">
+                    </div>
                     <!-- <div class="form-group">
                       <label>NIK Penduduk Yang Pindah</label>
                       <input required name="nik" type="number" class="form-control">
@@ -74,17 +78,14 @@ $this->load->view('dist/_partials/header1');
                       </select>
                     </div> -->
                     <div class="form-group">
-                      <label>No SKPWNI</label>
+                      <label>No SKDWNI</label>
                       <input required name="skpwni" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                       <label>Tgl Pindah Datang</label>
                       <input required name="tgl_pindah" type="date" class="form-control">
                     </div>
-                    <div class="form-group">
-                      <label>Alamat di RT</label>
-                      <input required name="alamat_rt" type="text" class="form-control">
-                    </div>
+                    
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div>

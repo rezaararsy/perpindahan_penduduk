@@ -498,7 +498,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                               }else if(row['kecamatan']==4){
                                 return kedungkandang[data];
                              
-                              }else if(row['kecamatan']==5){
+                              }else if(row
+                              ['kecamatan']==5){
                                 return sukun[data];
                               }
                             }},
