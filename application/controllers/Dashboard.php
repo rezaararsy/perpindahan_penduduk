@@ -83,7 +83,7 @@ class Dashboard extends CI_Controller {
 	public function inputData()
 	{
 		$kecamatan = $this->input->post('kecamatan');
-		$kelurahan = $this->input->post('kelurahan');
+		$kelurahan = $this->input->post('kodekelurahan');
 		$rw = $this->input->post('rw');
 		$rt = $this->input->post('rt');
 		$nik = 0;
@@ -113,7 +113,7 @@ class Dashboard extends CI_Controller {
 	public function inputData1()
 	{
 		$kecamatan = $this->input->post('kecamatan');
-		$kelurahan = $this->input->post('kelurahan');
+		$kelurahan = $this->input->post('kodekelurahan');
 		$rw = $this->input->post('rw');
 		$rt = $this->input->post('rt');
 		$nik = 0;

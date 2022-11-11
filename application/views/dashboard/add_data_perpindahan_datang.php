@@ -60,6 +60,7 @@ $this->load->view('dist/_partials/header1');
                     <div class="form-group">
                       <label>Alamat di RT</label>
                       <input required name="alamat_rt" type="text" class="form-control">
+                      <input name="kodekelurahan" id="kodekelurahan" type="hidden" class="form-control">
                     </div>
                     <!-- <div class="form-group">
                       <label>NIK Penduduk Yang Pindah</label>

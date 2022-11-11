@@ -293,7 +293,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
      $('#kelurahanya')
          .append($("<option></option>")
                     .attr("value", key)
-                    .text(blimbing[key])); 
+                    .text(blimbing[key]));
+      
     });
     updateChar2();
     }else if(d=="3"){
@@ -336,6 +337,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
       $("#rwnya").empty();
         $("#rtnya").empty();
       if(d=="1"){
+          document.getElementById("kodekelurahan").value = kodeblimbing[id]; 
           for(var i = 1; i<=rwblimbing[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -349,6 +351,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                         .text(i)); 
           }
         }else if(d=="3"){
+          document.getElementById("kodekelurahan").value = kodekedungkandang[id]; 
           for(var i = 1; i<=rwkedungkandang[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -362,6 +365,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                         .text(i)); 
           }
         }else if(d=="2"){
+          document.getElementById("kodekelurahan").value = kodeklojen[id]; 
           for(var i = 1; i<=rwklojen[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -375,6 +379,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                         .text(i)); 
           }
         }else if(d=="5"){
+          document.getElementById("kodekelurahan").value = kodelowokwaru[id]; 
           for(var i = 1; i<=rwlowokwaru[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -389,6 +394,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
           }
         
         }else if(d=="4"){
+          document.getElementById("kodekelurahan").value = kodesukun[id]; 
           for(var i = 1; i<=rwsukun[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -403,6 +409,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
           }
         }
     }
+
 
     $(document).ready( function () {
                 $('#table_id').DataTable({
@@ -429,19 +436,19 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {"data": "kelurahan",
                             render: function (data, type, row, meta) {
                               if(row['kecamatan']==1){
-                                return blimbing[data];
+                                return blimbing[kodeblimbing.indexOf(parseInt(data))];
                             
                               }else if(row['kecamatan']==2){
-                                return klojen[data];
+                                return klojen[kodeklojen.indexOf(parseInt(data))];
                              
                               }else if(row['kecamatan']==5){
-                                return lowokwaru[data];
+                                return lowokwaru[kodelowokwaru.indexOf(parseInt(data))];
                              
                               }else if(row['kecamatan']==3){
-                                return kedungkandang[data];
+                                return kedungkandang[kodekedungkandang.indexOf(parseInt(data))];
                              
                               }else if(row['kecamatan']==4){
-                                return sukun[data];
+                                return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
                             {"data": "rw"},
@@ -481,31 +488,46 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                   return 'Blimbing';
                                 }else if(data==2){
                                   return 'Klojen';
-                                }else if(data==3){
-                                  return 'Lowokwaru';
-                                }else if(data==4){
-                                  return 'Kedungkandang';
                                 }else if(data==5){
+                                  return 'Lowokwaru';
+                                }else if(data==3){
+                                  return 'Kedungkandang';
+                                }else if(data==4){
                                   return 'Sukun';
                                 }
                             }},
                             {"data": "kelurahan",
                             render: function (data, type, row, meta) {
+                              // if(row['kecamatan']==1){
+                              //   return blimbing[data];
+                            
+                              // }else if(row['kecamatan']==2){
+                              //   return klojen[data];
+                             
+                              // }else if(row['kecamatan']==5){
+                              //   return lowokwaru[data];
+                             
+                              // }else if(row['kecamatan']==3){
+                              //   return kedungkandang[data];
+                             
+                              // }else if(row
+                              // ['kecamatan']==4){
+                              //   return sukun[data];
+                              // }
                               if(row['kecamatan']==1){
-                                return blimbing[data];
+                                return blimbing[kodeblimbing.indexOf(parseInt(data))];
                             
                               }else if(row['kecamatan']==2){
-                                return klojen[data];
+                                return klojen[kodeklojen.indexOf(parseInt(data))];
                              
                               }else if(row['kecamatan']==5){
-                                return lowokwaru[data];
+                                return lowokwaru[kodelowokwaru.indexOf(parseInt(data))];
                              
                               }else if(row['kecamatan']==3){
-                                return kedungkandang[data];
+                                return kedungkandang[kodekedungkandang.indexOf(parseInt(data))];
                              
-                              }else if(row
-                              ['kecamatan']==4){
-                                return sukun[data];
+                              }else if(row['kecamatan']==4){
+                                return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
                             {"data": "rw"},
