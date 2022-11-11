@@ -11,7 +11,7 @@ class Auth extends CI_Controller {
 		
 	  }
 	public function index() {
-		if($this->session->userdata('status') == "login"){
+		if($this->session->userdata('status') == "login" && $this->session->userdata('role') != 102){
 			redirect('dashboard');
 		   }
 		$data = array(

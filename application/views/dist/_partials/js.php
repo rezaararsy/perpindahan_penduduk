@@ -255,10 +255,15 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
 
   <script>
     var blimbing = ["Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi"];
+    var kodeblimbing = [1002,1001,1005,1008,1011,1009,1006,1010,1003,1007,1004]
     var kedungkandang = ["Arjowinangun", "Bumiayu", "Buring", "Cemorokandang", "Kedungkandang", "Kotalama", "Lesanpuro", "Madyopuro", "Mergosono", "Sawojajar", "Tlogowaru", "Wonokoyo"];
+    var kodekedungkandang = [1011,1003,1005,1010,1006,1001,1007,1009,1002,1008,1012,1004];
     var klojen = ["Bareng", "Gadingasri", "Kasin", "Kauman", "Kiduldalem", "Klojen", "Oro-Oro Dowo", "Penanggungan", "Rampal Celaket", "Samaan", "Sukoharjo"];
+    var kodeklojen = [1009,1010,1006,1007,1004,1001,1008,1011,1002,1003,1005];
     var lowokwaru = ["Dinoyo", "Jatimulyo", "Ketawanggede", "Lowokwaru", "Merjosari", "Mojolangu", "Sumbersari", "Tasikmadu", "Tlogomas", "Tulusrejo", "Tunggulwulung", "Tunjungsekar"];
+    var kodelowokwaru = [1004,1007,1006,1011,1002,1009,1005,1012,1003,1010,1001,1008];
     var sukun = ["Bakalankrajan", "Bandulan", "Bandungrejosari", "Ciptomulyo", "Gadang", "Karangbesuki", "Kebonsari", "Mulyorejo", "Pisangcandi", "Sukun", "Tanjungrejo"];
+    var kodesukun = [1011,1008,1004,1001,1002,1009,1003,1010,1007,1005,1006];
 
     var rtblimbing = [34, 45, 55, 147, 85, 70, 137, 74, 38, 157, 95];
     var rwblimbing = [5, 7, 10, 21, 8, 12, 14, 7, 6, 24, 13];
@@ -284,43 +289,43 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     $("#rwnya").empty();
     $("#rtnya").empty();
     if(d=="1"){
-      $.each(blimbing, function(key, value) {   
+      $.each(kodeblimbing, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
                     .attr("value", key)
-                    .text(value)); 
-    });
-    updateChar2();
-    }else if(d=="4"){
-      $.each(kedungkandang, function(key, value) {   
-     $('#kelurahanya')
-         .append($("<option></option>")
-                    .attr("value", key)
-                    .text(value)); 
-    });
-    updateChar2();
-    }else if(d=="2"){
-      $.each(klojen, function(key, value) {   
-     $('#kelurahanya')
-         .append($("<option></option>")
-                    .attr("value", key)
-                    .text(value)); 
+                    .text(blimbing[key])); 
     });
     updateChar2();
     }else if(d=="3"){
-      $.each(lowokwaru, function(key, value) {   
+      $.each(kodekedungkandang, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
                     .attr("value", key)
-                    .text(value)); 
+                    .text(kedungkandang[key])); 
+    });
+    updateChar2();
+    }else if(d=="2"){
+      $.each(kodeklojen, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(klojen[key])); 
     });
     updateChar2();
     }else if(d=="5"){
-      $.each(sukun, function(key, value) {   
+      $.each(kodelowokwaru, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
                     .attr("value", key)
-                    .text(value)); 
+                    .text(lowokwaru[key])); 
+    });
+    updateChar2();
+    }else if(d=="3"){
+      $.each(kodesukun, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(sukun[key])); 
     });
     updateChar2();
     }
@@ -343,7 +348,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                         .attr("value", i)
                         .text(i)); 
           }
-        }else if(d=="4"){
+        }else if(d=="3"){
           for(var i = 1; i<=rwkedungkandang[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -369,7 +374,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                         .attr("value", i)
                         .text(i)); 
           }
-        }else if(d=="3"){
+        }else if(d=="5"){
           for(var i = 1; i<=rwlowokwaru[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -383,7 +388,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                         .text(i)); 
           }
         
-        }else if(d=="5"){
+        }else if(d=="4"){
           for(var i = 1; i<=rwsukun[id];i++){
             $('#rwnya')
             .append($("<option></option>")
@@ -413,11 +418,11 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                   return 'Blimbing';
                                 }else if(data==2){
                                   return 'Klojen';
-                                }else if(data==3){
-                                  return 'Lowokwaru';
-                                }else if(data==4){
-                                  return 'Kedungkandang';
                                 }else if(data==5){
+                                  return 'Lowokwaru';
+                                }else if(data==3){
+                                  return 'Kedungkandang';
+                                }else if(data==4){
                                   return 'Sukun';
                                 }
                             }},
@@ -429,13 +434,13 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                               }else if(row['kecamatan']==2){
                                 return klojen[data];
                              
-                              }else if(row['kecamatan']==3){
+                              }else if(row['kecamatan']==5){
                                 return lowokwaru[data];
                              
-                              }else if(row['kecamatan']==4){
+                              }else if(row['kecamatan']==3){
                                 return kedungkandang[data];
                              
-                              }else if(row['kecamatan']==5){
+                              }else if(row['kecamatan']==4){
                                 return sukun[data];
                               }
                             }},
@@ -492,14 +497,14 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                               }else if(row['kecamatan']==2){
                                 return klojen[data];
                              
-                              }else if(row['kecamatan']==3){
+                              }else if(row['kecamatan']==5){
                                 return lowokwaru[data];
                              
-                              }else if(row['kecamatan']==4){
+                              }else if(row['kecamatan']==3){
                                 return kedungkandang[data];
                              
                               }else if(row
-                              ['kecamatan']==5){
+                              ['kecamatan']==4){
                                 return sukun[data];
                               }
                             }},

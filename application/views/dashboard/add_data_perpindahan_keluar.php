@@ -31,9 +31,9 @@ $this->load->view('dist/_partials/header1');
                         <option disabled selected value="">Pilih Kecamatan</option>
                         <option value="1">Blimbing</option>
                         <option value="2">Klojen</option>
-                        <option value="3">Lowokwaru</option>
-                        <option value="4">Kedungkandang</option>
-                        <option value="5">Sukun</option>
+                        <option value="5">Lowokwaru</option>
+                        <option value="3">Kedungkandang</option>
+                        <option value="4">Sukun</option>
                       </select>
                     </div>
                     <div class="form-group">
