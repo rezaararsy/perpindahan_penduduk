@@ -4,10 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?php echo base_url(); ?>">E-PINDAD</a>
+            <a href="<?php echo base_url(); ?>">LAPOR PAK!</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="<?php echo base_url(); ?>">E-P</a>
+            <a href="<?php echo base_url(); ?>">L-P</a>
           </div>
           <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
