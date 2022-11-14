@@ -53,6 +53,14 @@ class M_Data extends CI_Model
     $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=2");
         return $hasil->num_rows();
   }
+  function get_keluar11($kec){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=2 AND kecamatan = '$kec'");
+        return $hasil->num_rows();
+  }
+  function get_masuk11($kec){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=1 AND kecamatan = '$kec'");
+        return $hasil->num_rows();
+  }
   function get_bulan($tahun,$bulan){
     $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun'");
     return $hasil->result();

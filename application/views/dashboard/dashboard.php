@@ -120,5 +120,42 @@ $this->load->view('dist/_partials/header1');
               
             </div>
           </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Kecamatan Kedungkandang Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChart13"></canvas>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Kecamatan Sukun Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChart14"></canvas>
+                  </div>
+                </div>             
+            </div>           
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Kecamatan Lowokwaru Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChart15"></canvas>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
       </div>
 <?php $this->load->view('dist/_partials/footer'); ?>
+<?php $this->load->view('dist/_partials/js2'); ?>

@@ -45,7 +45,18 @@ class Dashboard extends CI_Controller {
 			'9' => $this->m_data->get_bulan_datang(2022,9),
 			'10' => $this->m_data->get_bulan_datang(2022,10),
 			'11' => $this->m_data->get_bulan_datang(2022,11)
-		);	
+		);
+		$data['pindahluarblimbing'] = $this->m_data->get_keluar11(1);
+		$data['pindahluarklojen'] = $this->m_data->get_keluar11(2);
+		$data['pindahluarkedungkandang'] = $this->m_data->get_keluar11(3);
+		$data['pindahluarsukun'] = $this->m_data->get_keluar11(4);
+		$data['pindahluarlowokwaru'] = $this->m_data->get_keluar11(5);	
+		$data['pindahdatangblimbing'] = $this->m_data->get_masuk11(1);
+		$data['pindahdatangklojen'] = $this->m_data->get_masuk11(2);
+		$data['pindahdatangkedungkandang'] = $this->m_data->get_masuk11(3);
+		$data['pindahdatangsukun'] = $this->m_data->get_masuk11(4);
+		$data['pindahdatanglowokwaru'] = $this->m_data->get_masuk11(5);
+
 		$this->load->view('dashboard/dashboard', $data);
 	}
 	public function daftar_user() {
