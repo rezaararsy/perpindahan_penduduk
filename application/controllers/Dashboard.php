@@ -24,6 +24,28 @@ class Dashboard extends CI_Controller {
 		);
 		$data['masuk'] = $this->m_data->get_masuk();
 		$data['keluar'] = $this->m_data->get_keluar();
+		$data['pindahkeluar'] = array(
+			'3' => $this->m_data->get_bulan_keluar(2022,3),
+			'4' => $this->m_data->get_bulan_keluar(2022,4),
+			'5' => $this->m_data->get_bulan_datang(2022,5),
+			'6' => $this->m_data->get_bulan_keluar(2022,6),
+			'7' => $this->m_data->get_bulan_keluar(2022,7),
+			'8' => $this->m_data->get_bulan_keluar(2022,8),
+			'9' => $this->m_data->get_bulan_keluar(2022,9),
+			'10' => $this->m_data->get_bulan_keluar(2022,10),
+			'11' => $this->m_data->get_bulan_keluar(2022,11)	
+		);
+		$data['pindahdatang'] = array(
+			'3' => $this->m_data->get_bulan_datang(2022,3),
+			'4' => $this->m_data->get_bulan_datang(2022,4),
+			'5' => $this->m_data->get_bulan_datang(2022,5),
+			'6' => $this->m_data->get_bulan_datang(2022,6),
+			'7' => $this->m_data->get_bulan_datang(2022,7),
+			'8' => $this->m_data->get_bulan_datang(2022,8),
+			'9' => $this->m_data->get_bulan_datang(2022,9),
+			'10' => $this->m_data->get_bulan_datang(2022,10),
+			'11' => $this->m_data->get_bulan_datang(2022,11)
+		);	
 		$this->load->view('dashboard/dashboard', $data);
 	}
 	public function daftar_user() {

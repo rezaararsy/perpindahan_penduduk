@@ -72,23 +72,53 @@ $this->load->view('dist/_partials/header1');
               </div>
             </div>                   -->
           </div>
-          <!-- <div class="row">
-            <div class="col-lg-12 col-md-12 col-12 col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Statistics</h4>
-                  <div class="card-header-action">
-                    <div class="btn-group">
-
-                    </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Datang Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChart99"></canvas>
                   </div>
                 </div>
-                <div class="card-body">
-                  <canvas id="myChart" height="182"></canvas>
-
-                </div>
-              </div>
+              
             </div>
-          </div> -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Keluar Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChart999"></canvas>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Kecamatan Blimbing Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChart11"></canvas>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Kecamatan Klojen Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChart12"></canvas>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
       </div>
 <?php $this->load->view('dist/_partials/footer'); ?>
