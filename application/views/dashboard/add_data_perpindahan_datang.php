@@ -44,19 +44,20 @@ $this->load->view('dist/_partials/header1');
                       </select>
                     </div>
                     <div class="form-group">
-                      <label>Pilih RW</label>
-                      <select required name="rw" class="form-control" id="rwnya">
-                      <option disabled selected value="">Pilih RW</option>
-
-                      </select>
-                    </div>
-                    <div class="form-group">
                       <label>Pilih RT</label>
                       <select required name="rt" class="form-control" id="rtnya">
                       <option disabled selected value="">Pilih RT</option>
 
                       </select>
                     </div>
+                    <div class="form-group">
+                      <label>Pilih RW</label>
+                      <select required name="rw" class="form-control" id="rwnya">
+                      <option disabled selected value="">Pilih RW</option>
+
+                      </select>
+                    </div>
+                    
                     <div class="form-group">
                       <label>Alamat di RT</label>
                       <input required name="alamat_rt" type="text" class="form-control">

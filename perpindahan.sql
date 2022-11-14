@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Nov 2022 pada 08.56
+-- Waktu pembuatan: 14 Nov 2022 pada 02.03
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.28
 
@@ -57,7 +57,26 @@ INSERT INTO `perpindahan` (`id_perpindahan`, `kecamatan`, `kelurahan`, `rw`, `rt
 (20, '1', '1002', '5', '6', '0', 'GALUH AFIH NURMALASARI', '2', 'SKPWNI/3573', '2022-03-11', 'JL. TELUK MANADO 8 A'),
 (21, '1', '1002', '3', '3', '0', 'DWIJA WISNU BRATA', '2', 'SKPWNI/3573', '2022-03-21', 'JL. PERUM CITRA ARJOSARI RESIDENCE'),
 (22, '1', '1002', '3', '1', '0', 'LUKAS M. M. WURITIMUR	', '1', 'SKDWNI/3573', '2022-03-30', ' JL. TELUK PELABUHAN RATU NO. 26 B'),
-(27, '1', '1002', '1', '1', '0', 'r', '1', '2', '2022-11-11', 'r');
+(27, '1', '1002', '1', '1', '0', 'r', '1', '2', '2022-11-11', 'r'),
+(28, '1', '1001', '3', '1', '0', 'CLARISSA GISELA FREDERICK', '2', 'SKPWNI/3573', '2022-03-29', 'THE BALEARJOSARI RESIDENCE B-9'),
+(29, '1', '1001', '1', '3', '0', '	LASIADI', '1', 'SKDWNI/3573', '2022-03-18', 'JL PAHLAWAN'),
+(30, '1', '1005', '1', '8', '0', 'MUHAMMAD WAHYUDI', '1', 'SKDWNI/3573', '2022-03-25', 'JL. A. YANI III NO. 26 A'),
+(31, '1', '1005', '6', '2', '0', 'MARTHA KASTANJA LATUMETEN', '2', 'SKPWNI/3573', '2022-03-23', 'JL.A.YANI GG.SATRIA BARU NO.17'),
+(32, '1', '1008', '20', '2', '0', 'AAQILA NASYIRA', '2', 'SKPWNI/3573', '2022-03-31', 'JL. WIDAS BLOK M -16'),
+(33, '1', '1008', '5', '1', '0', 'SUGENG', '1', 'SKDWNI/3573', '2022-03-30', 'JL SAMPIAN NO.42'),
+(34, '1', '1011', '6', '1', '0', 'NUR MUHAMMAD MUSTOFA', '1', 'SKDWNI/3573', '2022-05-24', 'JL. JODIPAN WETAN GG. 3B / 2210'),
+(35, '1', '1011', '4', '4', '0', 'FARIZ SOKHINDA HAMZA', '2', 'SKPWNI/3573', '2022-07-21', 'JL. ZAENAL ZAKSE II / 2413'),
+(36, '1', '1011', '6', '1', '0', 'NUR MUHAMMAD MUSTOFA', '1', 'SKDWNI/3573', '2022-05-24', 'JL. JODIPAN WETAN GG. 3B / 2210'),
+(37, '1', '1006', '5', '3', '0', 'SANDI SETIAWAN', '2', 'SKPWNI/3573', '2022-03-23', 'JL. TERUSAN SULFAT 25'),
+(38, '1', '1006', '3', '1', '0', 'GUNAWAN', '1', 'SKDWNI/3573', '2022-03-29', 'JL. LA SUCIPTO GG. TARUNA VI'),
+(39, '1', '1010', '3', '9', '0', 'RIZKY BASATHA', '2', 'SKPWNI/3573', '2022-04-28', 'JL PUNTODEWO I NO.9'),
+(40, '1', '1010', '2', '13', '0', 'ALIF ANGGARA PUTRA', '1', 'SKDWNI/3573', '2022-04-06', 'JL. ONTOSENO VIII / 60 B'),
+(41, '1', '1003', '1', '8', '0', 'DYAH UTAMININGTYAS', '2', 'SKPWNI/3573', '2022-07-13', 'JL. CAKALANG I / 253'),
+(42, '1', '1003', '4', '1', '0', 'MOCHAMMAD IQBAL PURWASITO', '1', 'SKDWNI/3573', '2022-07-13', 'JL. POLOWIJEN II / 306'),
+(43, '1', '1007', '5', '5', '0', 'YOSHIKO STEFANO PAULUS RUMAMPUK', '2', 'SKPWNI/3573', '2022-05-09', 'JL. S. PARMAN I / 42'),
+(44, '1', '1007', '1', '24', '0', 'TISELIA ISLIKO', '1', 'SKDWNI/3573', '2022-04-28', 'JL. PLANTINA NO.19'),
+(45, '1', '1004', '11', '1', '0', 'YESICA PRAYOGI', '2', 'SKPWNI/3573', '2022-07-12', 'PONDOK BLIMBING INDAH BLOK M-4 / 4'),
+(46, '1', '1004', '6', '1', '0', 'GALIH PRASETYO', '1', 'SKDWNI/3573', '2022-07-14', ' JL SAMPIL 3 NO 36A');
 
 -- --------------------------------------------------------
 
@@ -104,7 +123,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `perpindahan`
 --
 ALTER TABLE `perpindahan`
-  MODIFY `id_perpindahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_perpindahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

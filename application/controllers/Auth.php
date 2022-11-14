@@ -52,7 +52,7 @@ class Auth extends CI_Controller {
 
 		$rtsukun = array(49, 67, 129, 62, 72, 83, 46, 60, 87, 113, 138);
 		$rwsukun = array(7, 8, 13, 5, 9, 9, 5, 7, 11, 9, 13);
-
+		//RW POLEHAN 9
 
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
