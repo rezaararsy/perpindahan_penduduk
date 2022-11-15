@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Nov 2022 pada 09.38
+-- Waktu pembuatan: 15 Nov 2022 pada 09.53
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.28
 
@@ -187,7 +187,11 @@ INSERT INTO `perpindahan` (`id_perpindahan`, `kecamatan`, `kelurahan`, `rw`, `rt
 (155, '4', '1007', '4', '2', '', 'FAISOL', '2', 'SKPWNI/3573', '2022-11-15', 'JL. PISANG CANDI BARAT'),
 (156, '4', '1005', '4', '2', '', 'SILA MUHAMMAD', '2', 'SKPWNI/3573', '2022-11-15', 'JL. SIMPANG SUKUN 50'),
 (157, '1', '1006', '12', '4', '', 'TASYAH ANGELINA', '2', 'SKPWNI/3573', '2022-11-15', 'JL. TITAN ASRI VI D / 36'),
-(158, '1', '1006', '3', '2', '', 'DEFANNY YUSHARIANI FITRI', '2', 'SKPWNI/3573', '2022-11-15', 'JL. L.A. SUCIPTO GG. TARUNA V / 20');
+(158, '1', '1006', '3', '2', '', 'DEFANNY YUSHARIANI FITRI', '2', 'SKPWNI/3573', '2022-11-15', 'JL. L.A. SUCIPTO GG. TARUNA V / 20'),
+(163, '2', '1008', '1', '8', '', 'DARWIN PRAYOGO ', '2', 'SKPWNI/3318', '2022-09-21', 'JL WELIRANG 1A/NO 6'),
+(164, '2', '1008', '2', '8', '', 'LINDA APRILIA', '2', 'SKPWNI/6402', '2022-09-26', 'JL B.S RIADI 4B/NO 13'),
+(165, '2', '1008', '', '', '', 'TRI RAHARJO', '2', 'SKPWNI/3507', '2022-11-09', 'JL JENDRAL BASUKI RAHMAT NO 124 GG.8'),
+(166, '2', '1008', '5', '3', '', 'RADEN AGUS ERIHARYANTO', '1', 'SKPWNI/3573', '2022-11-07', 'JL TAMPOMAS NO 4');
 
 -- --------------------------------------------------------
 
@@ -234,7 +238,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `perpindahan`
 --
 ALTER TABLE `perpindahan`
-  MODIFY `id_perpindahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id_perpindahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
