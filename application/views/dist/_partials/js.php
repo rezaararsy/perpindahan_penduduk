@@ -416,13 +416,14 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     }
     function updatedatatable() {
       console.log("Jalan");
-      //var kec = document.getElementById("kecamatanya");
-      // kecdata = document.getElementById("kecamatanya").value;
-      // //var kel = document.getElementById("kelurahanya");
-      // keldata = document.getElementById("kelurahanya").value;
-
-      kecdata = 1;
-      keldata = 1;
+      kecdata = 0;
+      keldata = 0;
+      var kec = document.getElementById("kecamatanya");
+      kecdata = kec.value;
+      var kel = document.getElementById("kelurahanya");
+      keldata = kel.value;
+      console.log(kecdata);
+      
       urle = "<?php echo base_url().'dashboard/data_json_perpindahan/'?>"+kecdata+'/'+keldata;
       // if (x.style.display === "none") {
       //   x.style.display = "block";
@@ -434,8 +435,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
       //panggiltabel();
       //$('#table_id').DataTable().ajax.reload();
       console.log(urle);
-
-      $('#table_id').DataTable().clear().draw();
+      $('#table_id').DataTable().ajax.url(urle).load();
+      //$('#table_id').DataTable().clear().draw();
     }
     
     

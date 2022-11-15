@@ -100,8 +100,23 @@ class Dashboard extends CI_Controller {
 	}
 
 	public function data_json_perpindahan(){
-		header('Content-Type: application/json');
-		echo $this->m_data->getDataPerpindahan();
+		$kecamatan = $this->uri->segment(3,0);
+		$kelurahan = $this->uri->segment(4,0);
+		if ($kecamatan == 0 && $kelurahan == 0)
+		{
+			header('Content-Type: application/json');
+			echo $this->m_data->getDataPerpindahan();
+		}
+		elseif($kecamatan != 0 && $kelurahan == 0)
+		{	
+			header('Content-Type: application/json');
+			echo $this->m_data->getDataPerpindahan4($kecamatan);
+		}else
+		{	
+			header('Content-Type: application/json');
+			echo $this->m_data->getDataPerpindahan3($kecamatan,$kelurahan);
+		}
+		
 	}
 
 	function deleteData(){ 

@@ -29,14 +29,19 @@ class Auth extends CI_Controller {
 	{	
 		// redirect(base_url("dashboard"));
 		//blimbng 1 klojen 2 lowokwaru 3 kedungkandang 4 kedungkandang 5
-		//blimbing-arjosari-rw1-rt1 = 10001011 = xzzyymmm
+		//blimbing-arjosari-rw1-rt1 = 1100201001 = xzzzzyymmm
 		// password blimbing01011 = kecamatan-rt-rw
 		// password sementara = malangku
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
+		$kodeblimbing = array(1002,1001,1005,1008,1011,1009,1006,1010,1003,1007,1004);
 		$kedungkandang = array("Arjowinangun", "Bumiayu", "Buring", "Cemorokandang", "Kedungkandang", "Kotalama", "Lesanpuro", "Madyopuro", "Mergosono", "Sawojajar", "Tlogowaru", "Wonokoyo");
+		$kodekedungkandang = array(1011,1003,1005,1010,1006,1001,1007,1009,1002,1008,1012,1004);
 		$klojen = array("Bareng", "Gadingasri", "Kasin", "Kauman", "Kiduldalem", "Klojen", "Oro-Oro Dowo", "Penanggungan", "Rampal Celaket", "Samaan", "Sukoharjo");
+		$kodeklojen = array(1009,1010,1006,1007,1004,1001,1008,1011,1002,1003,1005);
 		$lowokwaru = array("Dinoyo", "Jatimulyo", "Ketawanggede", "Lowokwaru", "Merjosari", "Mojolangu", "Sumbersari", "Tasikmadu", "Tlogomas", "Tulusrejo", "Tunggulwulung", "Tunjungsekar");
+		$kodelowokwaru = array(1004,1007,1006,1011,1002,1009,1005,1012,1003,1010,1001,1008);
 		$sukun = array("Bakalankrajan", "Bandulan", "Bandungrejosari", "Ciptomulyo", "Gadang", "Karangbesuki", "Kebonsari", "Mulyorejo", "Pisangcandi", "Sukun", "Tanjungrejo");
+		$kodesukun = array(1011,1008,1004,1001,1002,1009,1003,1010,1007,1005,1006);
 
 		$rtblimbing = array(34, 45, 55, 147, 85, 70, 137, 74, 38, 157, 95);
 		$rwblimbing = array(5, 7, 10, 21, 8, 12, 14, 7, 6, 24, 13);
@@ -58,9 +63,9 @@ class Auth extends CI_Controller {
 		$password = $this->input->post('password');
 
 		$kecamatanya = (int) substr($username,0,1);
-		$kelurahanya = (int) substr($username,1,2);
-		$rwnya = (int) substr($username,3,2);
-		$rtnya = (int) substr($username,5,3);
+		$kelurahanya = (int) substr($username,1,4);
+		$rwnya = (int) substr($username,5,2);
+		$rtnya = (int) substr($username,7,3);
 
 
 		$user_kecamatan = "";
@@ -71,13 +76,13 @@ class Auth extends CI_Controller {
 		}elseif($kecamatanya == 2){
 			$user_kecamatan = "Klojen";
 			$nama_user =  "$user_kecamatan $klojen[$kelurahanya] RW $rwnya RT $rtnya";
-		}elseif($kecamatanya == 3){
+		}elseif($kecamatanya == 5){
 			$user_kecamatan = "Lowokwaru";
 			$nama_user =  "$user_kecamatan $lowokwaru[$kelurahanya] RW $rwnya RT $rtnya";
-		}elseif($kecamatanya == 4){
+		}elseif($kecamatanya == 3){
 			$user_kecamatan = "Kedungkandang";
 			$nama_user =  "$user_kecamatan $kedungkandang[$kelurahanya] RW $rwnya RT $rtnya";
-		}elseif($kecamatanya == 5){
+		}elseif($kecamatanya == 4){
 			$user_kecamatan = "Sukun";
 			$nama_user =  "$user_kecamatan $sukun[$kelurahanya] RW $rwnya RT $rtnya";
 		}

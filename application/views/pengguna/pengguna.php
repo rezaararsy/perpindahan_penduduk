@@ -41,6 +41,30 @@ $this->load->view('dist/_partials/header1');
                 </div>
               </div>
             </div>
+            <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Datang Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChartp1"></canvas>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+               <div class="card">
+                  <div class="card-header">
+                    <h4>Grafik Perpindahan Keluar Penduduk Tahun 2022</h4>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="myChartp2"></canvas>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
             <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-1">
                 <div class="card-icon bg-warning">
@@ -92,3 +116,4 @@ $this->load->view('dist/_partials/header1');
           </div> -->
       </div>
 <?php $this->load->view('dist/_partials/footer'); ?>
+<?php $this->load->view('dist/_partials/js3'); ?>

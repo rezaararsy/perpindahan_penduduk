@@ -27,6 +27,7 @@ class M_Data extends CI_Model
   function getDataPerpindahan(){
     $this->datatables->select('id_perpindahan,kecamatan,kelurahan,rw,rt,nik,nama,jenis_pindah,skpwni,tgl_pindah,alamat_rt');
     $this->datatables->from('perpindahan');
+    
     // $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2" data-jml="$3" data-harga="$4">Edit<i class="fa fa-fw fa-edit"></i></a>  <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama_produk,jml_stock,harga');
     return $this->datatables->generate();
   }
@@ -36,6 +37,21 @@ class M_Data extends CI_Model
     $this->datatables->where('rt', $rt);
     $this->datatables->where('rw', $rw);
     $this->datatables->where('kelurahan', $kelurahan);
+    $this->datatables->where('kecamatan', $kecamatan);
+    // $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2" data-jml="$3" data-harga="$4">Edit<i class="fa fa-fw fa-edit"></i></a>  <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama_produk,jml_stock,harga');
+    return $this->datatables->generate();
+  }
+  function getDataPerpindahan3($kecamatan,$kelurahan){
+    $this->datatables->select('id_perpindahan,kecamatan,kelurahan,rw,rt,nik,nama,jenis_pindah,skpwni,tgl_pindah,alamat_rt');
+    $this->datatables->from('perpindahan');
+    $this->datatables->where('kelurahan', $kelurahan);
+    $this->datatables->where('kecamatan', $kecamatan);
+    // $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2" data-jml="$3" data-harga="$4">Edit<i class="fa fa-fw fa-edit"></i></a>  <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama_produk,jml_stock,harga');
+    return $this->datatables->generate();
+  }
+  function getDataPerpindahan4($kecamatan){
+    $this->datatables->select('id_perpindahan,kecamatan,kelurahan,rw,rt,nik,nama,jenis_pindah,skpwni,tgl_pindah,alamat_rt');
+    $this->datatables->from('perpindahan');
     $this->datatables->where('kecamatan', $kecamatan);
     // $this->datatables->add_column('view', '<a href="javascript:void(0);" class="edit_record btn btn-success" data-kode="$1" data-nama="$2" data-jml="$3" data-harga="$4">Edit<i class="fa fa-fw fa-edit"></i></a>  <a href="javascript:void(0);" class="hapus_record btn btn-danger" data-kode="$1">Hapus<i class="fa fa-fw fa-trash"></i></a>','id,nama_produk,jml_stock,harga');
     return $this->datatables->generate();
@@ -71,6 +87,14 @@ class M_Data extends CI_Model
   }
   function get_bulan_datang($tahun,$bulan){
     $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 1 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun'");
+    return $hasil->num_rows();
+  }
+  function get_bulan_keluarpengguna($tahun,$bulan,$rt,$rw,$kelurahan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 2 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun' AND rt=$rt AND rw=$rw AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
+    return $hasil->num_rows();
+  }
+  function get_bulan_datangpengguna($tahun,$bulan,$rt,$rw,$kelurahan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 1 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun' AND rt=$rt AND rw=$rw AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
     return $hasil->num_rows();
   }
   function get_masuk1($rt,$rw,$kelurahan,$kecamatan){

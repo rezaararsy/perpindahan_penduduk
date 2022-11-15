@@ -18,7 +18,7 @@ $this->load->view('dist/_partials/header1');
                 <div class="select">
                   <div class="form-group">
                     <label>Pilih Kecamatan</label>
-                          <select name="kecamatan" class="form-control" id="kecamatannya" onchange="updateChar()">
+                          <select name="kecamatan" class="form-control" id="kecamatanya" onchange="updateChar()">
                             <option disabled selected value="">Pilih Kecamatan</option>
                             <option value="0">Semua</option>
                             <option value="1">Blimbing</option>
@@ -31,7 +31,7 @@ $this->load->view('dist/_partials/header1');
                         
                 </div>
               </div>
-              <div class="col-md-6 col-xs-12">
+              <!-- <div class="col-md-6 col-xs-12">
                 <div class="select">
 
                        <div class="form-group">
@@ -41,7 +41,7 @@ $this->load->view('dist/_partials/header1');
 
                       </select>
                     </div>
-                </div>
+                </div> -->
               </div>
               <div class="col-md-6 col-xs-12">
                 <div class="form-group">
