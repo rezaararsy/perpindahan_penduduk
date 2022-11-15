@@ -12,9 +12,47 @@ $this->load->view('dist/_partials/header1');
           </div>
 
           <div class="section-body">
-   
-
+            <!-- <form action="<?php echo base_url(). 'dashboard/data_pindah/'; ?>" method="post"> -->
             <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="select">
+                  <div class="form-group">
+                    <label>Pilih Kecamatan</label>
+                          <select name="kecamatan" class="form-control" id="kecamatannya" onchange="updateChar()">
+                            <option disabled selected value="">Pilih Kecamatan</option>
+                            <option value="0">Semua</option>
+                            <option value="1">Blimbing</option>
+                            <option value="2">Klojen</option>
+                            <option value="5">Lowokwaru</option>
+                            <option value="3">Kedungkandang</option>
+                            <option value="4">Sukun</option>
+                          </select>
+                        </div>
+                        
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <div class="select">
+
+                       <div class="form-group">
+                      <label>Pilih Kelurahan</label>
+                      <select name="kelurahan" class="form-control" id="kelurahanya" onchange="updateChar2()">
+                      <option disabled selected value="">Pilih Kelurahan</option>
+
+                      </select>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <div class="form-group">
+                  <button onclick="updatedatatable()" class="btn btn-primary">Filter</button>
+                </div>
+              </div>
+            <!-- </form> -->
+            </div>
+            
+
+            <div class="row" id="isine">
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">

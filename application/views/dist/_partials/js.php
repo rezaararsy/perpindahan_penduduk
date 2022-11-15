@@ -281,6 +281,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     var rwsukun = [7, 8, 13, 5, 9, 9, 5, 7, 11, 9, 13];
     var d = "";
     var id = 0;
+    var kecdata = 0;
+    var keldata = 0;
     function updateChar() {
       console.log("Berjalan");
     d = document.getElementById("zoneSelect").value;
@@ -297,6 +299,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
       
     });
     updateChar2();
+    
     }else if(d=="3"){
       $.each(kodekedungkandang, function(key, value) {   
      $('#kelurahanya')
@@ -332,7 +335,9 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     }
     
     }
+    var urle = "<?php echo base_url().'dashboard/data_json_perpindahan/'?>"+kecdata+'/'+keldata;
     function updateChar2() {
+      console.log("Berjalan2");
       id = document.getElementById("kelurahanya").value;
       $("#rwnya").empty();
         $("#rtnya").empty();
@@ -409,13 +414,37 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
           }
         }
     }
+    function updatedatatable() {
+      console.log("Jalan");
+      //var kec = document.getElementById("kecamatanya");
+      // kecdata = document.getElementById("kecamatanya").value;
+      // //var kel = document.getElementById("kelurahanya");
+      // keldata = document.getElementById("kelurahanya").value;
 
+      kecdata = 1;
+      keldata = 1;
+      urle = "<?php echo base_url().'dashboard/data_json_perpindahan/'?>"+kecdata+'/'+keldata;
+      // if (x.style.display === "none") {
+      //   x.style.display = "block";
+      // } else { 
+      //   x.style.display = "none";
+      // }
+      //$('#table_id').DataTable().ajax.reload();
+      // $("#table_id tr").remove(); 
+      //panggiltabel();
+      //$('#table_id').DataTable().ajax.reload();
+      console.log(urle);
 
-    $(document).ready( function () {
-                $('#table_id').DataTable({
+      $('#table_id').DataTable().clear().draw();
+    }
+    
+    
+    function panggiltabel(){
+      
+      $('#table_id').DataTable({
                 processing: true,
                 serverSide: true,
-                      ajax: {"url": "<?php echo base_url().'dashboard/data_json_perpindahan'?>", "type": "POST"},
+                      ajax: {"url": urle, "type": "POST"},
                       columns: [
                             {"data": "id_perpindahan"},
                             {"data": "nama"},
@@ -472,13 +501,19 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                 },
                       ]
                 });
+            }
+
+
+            $(document).ready( function () {
+                panggiltabel();
             } );
+            
 
             $(document).ready( function () {
                 $('#table_id2').DataTable({
                 processing: true,
                 serverSide: true,
-                      ajax: {"url": "<?php echo base_url().'pengguna/data_json_perpindahan'?>", "type": "POST"},
+                      ajax: {"url": "<?php echo base_url().'pengguna/data_json_perpindahan/'?>", "type": "POST"},
                       columns: [
                             {"data": "id_perpindahan"},
                             {"data": "nama"},
