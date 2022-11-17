@@ -456,7 +456,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {"data": "nama",
                             render: function (data, type, row, meta) {
                               const mask = "*";
-                              let maskedName = data.substring(0,10) + mask.repeat(data.length-2) + data.slice(-10);
+                              let maskedName = data.substring(0,10) + mask.repeat(data.length-4) + data.slice(-5);
                               return maskedName;
                               // return data;
                             }},
