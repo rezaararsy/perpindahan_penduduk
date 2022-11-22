@@ -507,7 +507,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {
                     "data": "alamat_rt",
                     render: function (data, type, row, meta) {
-                      return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
+                      return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td><a style="margin-left:10px;margin-top:15px;" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-warning batal_record">Batal Pindah</a></td>';
                         // return '<td><a href="javascript:void(0);" onclick="updateChar()" data-kecamatan="'+row['kecamatan']+'" data-kelurahan="'+row['kelurahan']+'" data-rw="'+row['rw']+'" data-rt="'+row['rt']+'" data-nik="'+row['nik']+'" data-nama="'+row['nama']+'" data-jenis_pindah="'+row['jenis_pindah']+'" data-skpwni="'+row['skpwni']+'" data-tgl_pindah="'+row['tgl_pindah']+'" data-alamat_rt="'+row['alamat_rt']+'" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
                     }
                 },
@@ -594,6 +594,12 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
             } );
 
             $('#table_id').on('click','.hapus_record',function(){
+                    var id_perpindahan=$(this).data('kode');
+                    $('#ModalHapus').modal('show');
+                    $('[name="id_perpindahan"]').val(id_perpindahan);
+              });
+
+              $('#table_id').on('click','.batal_record',function(){
                     var id_perpindahan=$(this).data('kode');
                     $('#ModalHapus').modal('show');
                     $('[name="id_perpindahan"]').val(id_perpindahan);
