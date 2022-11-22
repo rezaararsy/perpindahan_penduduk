@@ -30,6 +30,7 @@ class Auth extends CI_Controller {
 		// redirect(base_url("dashboard"));
 		//blimbng 1 klojen 2 lowokwaru 3 kedungkandang 4 kedungkandang 5
 		//blimbing-arjosari-rw1-rt1 = 1100201001 = xzzzzyymmm
+		//5100808005
 		// password blimbing01011 = kecamatan-rt-rw
 		// password sementara = malangku
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
@@ -78,7 +79,7 @@ class Auth extends CI_Controller {
 			$nama_user =  "$user_kecamatan $klojen[$kelurahanya] RW $rwnya RT $rtnya";
 		}elseif($kecamatanya == 5){
 			$user_kecamatan = "Lowokwaru";
-			$nama_user =  "$user_kecamatan $lowokwaru[$kelurahanya] RW $rwnya RT $rtnya";
+			// $nama_user =  " RW $rwnya RT $rtnya";
 		}elseif($kecamatanya == 3){
 			$user_kecamatan = "Kedungkandang";
 			$nama_user =  "$user_kecamatan $kedungkandang[$kelurahanya] RW $rwnya RT $rtnya";

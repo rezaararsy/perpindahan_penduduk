@@ -439,6 +439,11 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
       //$('#table_id').DataTable().clear().draw();
     }
     
+    function mask(name){
+      const mask = "*";
+      let maskedName = name.substring(0,1) + mask.repeat(name.length-2) + name.slice(-1);
+      return maskedName;
+    }
     
     function panggiltabel(){
       
@@ -448,7 +453,13 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                       ajax: {"url": urle, "type": "POST"},
                       columns: [
                             {"data": "id_perpindahan"},
-                            {"data": "nama"},
+                            {"data": "nama",
+                            render: function (data, type, row, meta) {
+                              const mask = "*";
+                              let maskedName = data.substring(0,10) + mask.repeat(data.length-4) + data.slice(-5);
+                              return maskedName;
+                              // return data;
+                            }},
                             {"data": "kecamatan",
                             render: function (data, type, row, meta) {
                                 if(data==1){
