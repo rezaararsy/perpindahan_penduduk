@@ -529,8 +529,13 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                       ajax: {"url": "<?php echo base_url().'pengguna/data_json_perpindahan/'?>", "type": "POST"},
                       columns: [
                             {"data": "id_perpindahan"},
-                            {"data": "nama"},
-                            {"data": "kecamatan",
+                            {"data": "nama"},{"data": "nama",
+                            render: function (data, type, row, meta) {
+                              const mask = "*";
+                              let maskedName = data.substring(0,10) + mask.repeat(data.length-4) + data.slice(-5);
+                              return maskedName;
+                              //return data;
+                            }},{"data": "kecamatan",
                             render: function (data, type, row, meta) {
                                 if(data==1){
                                   return 'Blimbing';
@@ -601,7 +606,13 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                       ajax: {"url": "<?php echo base_url().'pengguna_kelurahan/data_json_perpindahan/'?>", "type": "POST"},
                       columns: [
                             {"data": "id_perpindahan"},
-                            {"data": "nama"},
+                            {"data": "nama",
+                            render: function (data, type, row, meta) {
+                              const mask = "*";
+                              let maskedName = data.substring(0,10) + mask.repeat(data.length-4) + data.slice(-5);
+                              return maskedName;
+                              //return data;
+                            }},
                             {"data": "kecamatan",
                             render: function (data, type, row, meta) {
                                 if(data==1){
