@@ -458,7 +458,7 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                               const mask = "*";
                               let maskedName = data.substring(0,10) + mask.repeat(data.length-4) + data.slice(-5);
                               return maskedName;
-                              // return data;
+                              //return data;
                             }},
                             {"data": "kecamatan",
                             render: function (data, type, row, meta) {
@@ -507,7 +507,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {
                     "data": "alamat_rt",
                     render: function (data, type, row, meta) {
-                      return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td><a style="margin-left:10px;margin-top:15px;" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-warning batal_record">Batal Pindah</a></td>';
+                      return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td></td>';
+                      // return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td><a style="margin-left:10px;margin-top:15px;" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-warning batal_record">Batal Pindah</a></td>';
                         // return '<td><a href="javascript:void(0);" onclick="updateChar()" data-kecamatan="'+row['kecamatan']+'" data-kelurahan="'+row['kelurahan']+'" data-rw="'+row['rw']+'" data-rt="'+row['rt']+'" data-nik="'+row['nik']+'" data-nama="'+row['nama']+'" data-jenis_pindah="'+row['jenis_pindah']+'" data-skpwni="'+row['skpwni']+'" data-tgl_pindah="'+row['tgl_pindah']+'" data-alamat_rt="'+row['alamat_rt']+'" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
                     }
                 },
@@ -526,6 +527,78 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                 processing: true,
                 serverSide: true,
                       ajax: {"url": "<?php echo base_url().'pengguna/data_json_perpindahan/'?>", "type": "POST"},
+                      columns: [
+                            {"data": "id_perpindahan"},
+                            {"data": "nama"},
+                            {"data": "kecamatan",
+                            render: function (data, type, row, meta) {
+                                if(data==1){
+                                  return 'Blimbing';
+                                }else if(data==2){
+                                  return 'Klojen';
+                                }else if(data==5){
+                                  return 'Lowokwaru';
+                                }else if(data==3){
+                                  return 'Kedungkandang';
+                                }else if(data==4){
+                                  return 'Sukun';
+                                }
+                            }},
+                            {"data": "kelurahan",
+                            render: function (data, type, row, meta) {
+                              // if(row['kecamatan']==1){
+                              //   return blimbing[data];
+                            
+                              // }else if(row['kecamatan']==2){
+                              //   return klojen[data];
+                             
+                              // }else if(row['kecamatan']==5){
+                              //   return lowokwaru[data];
+                             
+                              // }else if(row['kecamatan']==3){
+                              //   return kedungkandang[data];
+                             
+                              // }else if(row
+                              // ['kecamatan']==4){
+                              //   return sukun[data];
+                              // }
+                              if(row['kecamatan']==1){
+                                return blimbing[kodeblimbing.indexOf(parseInt(data))];
+                            
+                              }else if(row['kecamatan']==2){
+                                return klojen[kodeklojen.indexOf(parseInt(data))];
+                             
+                              }else if(row['kecamatan']==5){
+                                return lowokwaru[kodelowokwaru.indexOf(parseInt(data))];
+                             
+                              }else if(row['kecamatan']==3){
+                                return kedungkandang[kodekedungkandang.indexOf(parseInt(data))];
+                             
+                              }else if(row['kecamatan']==4){
+                                return sukun[kodesukun.indexOf(parseInt(data))];
+                              }
+                            }},
+                            {"data": "rw"},
+                            {"data": "rt"},
+                            {"data": "alamat_rt"},
+                            {"data": "tgl_pindah"},
+                            {"data": "jenis_pindah",
+                            render: function (data, type, row, meta) {
+                                if(data==1){
+                                  return 'Pindah Masuk';
+                                }else{
+                                  return 'Pindah Keluar';
+                                }
+                            }}
+                      ]
+                });
+            } );
+
+            $(document).ready( function () {
+                $('#table_id3').DataTable({
+                processing: true,
+                serverSide: true,
+                      ajax: {"url": "<?php echo base_url().'pengguna_kelurahan/data_json_perpindahan/'?>", "type": "POST"},
                       columns: [
                             {"data": "id_perpindahan"},
                             {"data": "nama"},

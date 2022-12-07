@@ -105,4 +105,20 @@ class M_Data extends CI_Model
     $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=2 AND rt=$rt AND rw=$rw AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
         return $hasil->num_rows();
   }
+  function get_masuk1kelurahan($kelurahan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=1 AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
+        return $hasil->num_rows();
+  }
+  function get_keluar1kelurahan($kelurahan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=2  AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
+        return $hasil->num_rows();
+  }
+  function get_bulan_keluarpenggunakelurahan($tahun,$bulan,$kelurahan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 2 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun' AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
+    return $hasil->num_rows();
+  }
+  function get_bulan_datangpenggunakelurahan($tahun,$bulan,$kelurahan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 1 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun' AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
+    return $hasil->num_rows();
+  }
 }

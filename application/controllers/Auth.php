@@ -119,6 +119,14 @@ class Auth extends CI_Controller {
 				}				
 				elseif($role == 102){
 					redirect(base_url("pengguna"));		
+				}elseif($role == 103){
+					$data_session2 = array(
+						'kecamatan' => $ambile->row()->kecamatan,
+						'kelurahan' => $ambile->row()->kelurahan,
+						);
+					$this->session->set_userdata($data_session2);
+					$role = $this->session->userdata('role');
+					redirect(base_url("pengguna_kelurahan"));		
 				}
 			}elseif($password == "malangkota1987"){
 				$data_session = array(
