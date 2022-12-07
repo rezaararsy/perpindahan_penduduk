@@ -32,7 +32,7 @@ $this->load->view('dist/_partials/header1');
                 </div>
               </div>
               <div class="col-md-6 col-xs-12">
-                <!-- <div class="select">
+                <div class="select">
 
                        <div class="form-group">
                       <label>Pilih Kelurahan</label>
@@ -41,7 +41,7 @@ $this->load->view('dist/_partials/header1');
 
                       </select>
                     </div>
-                </div> -->
+                </div>
               </div>
               <div class="col-md-6 col-xs-12">
                 <div class="form-group">
