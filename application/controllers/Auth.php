@@ -32,7 +32,9 @@ class Auth extends CI_Controller {
 		//blimbing-arjosari-rw1-rt1 = 1100201001 = xzzzzyymmm
 		//5100808005
 		// password blimbing01011 = kecamatan-rt-rw
-		// password sementara = malangku
+		// password sementara = malangkota1987
+		// sukun = 4100504001
+		// merjosari = 5100211009
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
 		$kodeblimbing = array(1002,1001,1005,1008,1011,1009,1006,1010,1003,1007,1004);
 		$kedungkandang = array("Arjowinangun", "Bumiayu", "Buring", "Cemorokandang", "Kedungkandang", "Kotalama", "Lesanpuro", "Madyopuro", "Mergosono", "Sawojajar", "Tlogowaru", "Wonokoyo");
@@ -80,6 +82,7 @@ class Auth extends CI_Controller {
 		}elseif($kecamatanya == 5){
 			$user_kecamatan = "Lowokwaru";
 			// $nama_user =  " RW $rwnya RT $rtnya";
+			$nama_user =  "$user_kecamatan $lowokwaru[$kelurahanya] RW $rwnya RT $rtnya";
 		}elseif($kecamatanya == 3){
 			$user_kecamatan = "Kedungkandang";
 			$nama_user =  "$user_kecamatan $kedungkandang[$kelurahanya] RW $rwnya RT $rtnya";
