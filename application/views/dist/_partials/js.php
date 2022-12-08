@@ -375,6 +375,100 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     }
     
     }
+
+    function updateChar00() {
+      console.log("Berjalan");
+    d = document.getElementById("zoneSelect").value;
+    //alert(d);
+    $("#kelurahanya").empty();
+    $("#rwnya").empty();
+    $("#rtnya").empty();
+    if(d=="1"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+                    $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", 0)
+                    .text("Pilih  Semua Kelurahan"));
+      $.each(kodeblimbing, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(blimbing[key]));
+      
+    });
+    updateChar2();
+    
+    }else if(d=="3"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+                    $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", 0)
+                    .text("Semua Kelurahan"));
+      $.each(kodekedungkandang, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(kedungkandang[key])); 
+    });
+    updateChar2();
+    }else if(d=="2"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+      $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", 0)
+                    .text("Semua Kelurahan"));
+      $.each(kodeklojen, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(klojen[key])); 
+    });
+    updateChar2();
+    }else if(d=="5"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+                    $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", 0)
+                    .text("Semua Kelurahan"));
+      $.each(kodelowokwaru, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(lowokwaru[key])); 
+    });
+    updateChar2();
+    }else if(d=="4"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+                    $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", 0)
+                    .text("Semua Kelurahan"));
+      $.each(kodesukun, function(key, value) {   
+     $('#kelurahanya')
+         .append($("<option></option>")
+                    .attr("value", key)
+                    .text(sukun[key])); 
+    });
+    updateChar2();
+    }
+    
+    }
+
     var urle = "<?php echo base_url().'dashboard/data_json_perpindahan/'?>"+kecdata+'/'+keldata;
     function updateChar2() {
       console.log("Berjalan2");

@@ -18,7 +18,7 @@ $this->load->view('dist/_partials/header1');
                 <div class="select">
                   <div class="form-group">
                     <label>Pilih Kecamatan</label>
-                          <select name="kecamatan" class="form-control" id="zoneSelect" onchange="updateChar()">
+                          <select name="kecamatan" class="form-control" id="zoneSelect" onchange="updateChar00()">
                             <option disabled selected value="">Pilih Kecamatan</option>
                             <option value="0">Semua</option>
                             <option value="1">Blimbing</option>
