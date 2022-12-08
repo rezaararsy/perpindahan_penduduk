@@ -73,24 +73,41 @@ class Auth extends CI_Controller {
 
 		$user_kecamatan = "";
 		
+		// if($kecamatanya == 1){
+		// 	$user_kecamatan = "Blimbing";
+		// 	$nama_user =  "$user_kecamatan $blimbing[$kelurahanya] RW $rwnya RT $rtnya";
+		// }elseif($kecamatanya == 2){
+		// 	$user_kecamatan = "Klojen";
+		// 	$nama_user =  "$user_kecamatan $klojen[$kelurahanya] RW $rwnya RT $rtnya";
+		// }elseif($kecamatanya == 5){
+		// 	$user_kecamatan = "Lowokwaru";
+		// 	// $nama_user =  " RW $rwnya RT $rtnya";
+		// 	$nama_user =  "$user_kecamatan $lowokwaru[$kelurahanya] RW $rwnya RT $rtnya";
+		// }elseif($kecamatanya == 3){
+		// 	$user_kecamatan = "Kedungkandang";
+		// 	$nama_user =  "$user_kecamatan $kedungkandang[$kelurahanya] RW $rwnya RT $rtnya";
+		// }elseif($kecamatanya == 4){
+		// 	$user_kecamatan = "Sukun";
+		// 	$nama_user =  "$user_kecamatan $sukun[$kelurahanya] RW $rwnya RT $rtnya";
+		// }
+
 		if($kecamatanya == 1){
 			$user_kecamatan = "Blimbing";
-			$nama_user =  "$user_kecamatan $blimbing[$kelurahanya] RW $rwnya RT $rtnya";
+			$nama_user =  "RW $rwnya RT $rtnya";
 		}elseif($kecamatanya == 2){
 			$user_kecamatan = "Klojen";
-			$nama_user =  "$user_kecamatan $klojen[$kelurahanya] RW $rwnya RT $rtnya";
+			$nama_user =  "RW $rwnya RT $rtnya";
 		}elseif($kecamatanya == 5){
 			$user_kecamatan = "Lowokwaru";
 			// $nama_user =  " RW $rwnya RT $rtnya";
-			$nama_user =  "$user_kecamatan $lowokwaru[$kelurahanya] RW $rwnya RT $rtnya";
+			$nama_user =  "RW $rwnya RT $rtnya";
 		}elseif($kecamatanya == 3){
 			$user_kecamatan = "Kedungkandang";
-			$nama_user =  "$user_kecamatan $kedungkandang[$kelurahanya] RW $rwnya RT $rtnya";
+			$nama_user =  "RW $rwnya RT $rtnya";
 		}elseif($kecamatanya == 4){
 			$user_kecamatan = "Sukun";
-			$nama_user =  "$user_kecamatan $sukun[$kelurahanya] RW $rwnya RT $rtnya";
+			$nama_user =  "RW $rwnya RT $rtnya";
 		}
-
 
 		
 
