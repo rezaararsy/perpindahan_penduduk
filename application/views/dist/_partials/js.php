@@ -286,11 +286,19 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     function updateChar() {
       console.log("Berjalan");
     d = document.getElementById("zoneSelect").value;
-    // alert(d);
+    //alert(d);
     $("#kelurahanya").empty();
     $("#rwnya").empty();
     $("#rtnya").empty();
     if(d=="1"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+      //               $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih  Semua Kelurahan"));
       $.each(kodeblimbing, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
@@ -301,6 +309,14 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     updateChar2();
     
     }else if(d=="3"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+      //               $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih  Semua Kelurahan"));
       $.each(kodekedungkandang, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
@@ -309,6 +325,14 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     });
     updateChar2();
     }else if(d=="2"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih  Semua Kelurahan"));
       $.each(kodeklojen, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
@@ -317,6 +341,14 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     });
     updateChar2();
     }else if(d=="5"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+      //               $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih  Semua Kelurahan"));
       $.each(kodelowokwaru, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
@@ -325,6 +357,14 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
     });
     updateChar2();
     }else if(d=="4"){
+      // $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih Kelurahan").attr('disabled','disabled'));
+      //               $('#kelurahanya')
+      //    .append($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih  Semua Kelurahan"));
       $.each(kodesukun, function(key, value) {   
      $('#kelurahanya')
          .append($("<option></option>")
@@ -415,14 +455,23 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
         }
     }
     function updatedatatable() {
+      // $('#kelurahanya')
+      //    .prepend($("<option></option>")
+      //               .attr("value", 0)
+      //               .text("Pilih  Semua Kelurahan"));
       console.log("Jalan");
       kecdata = 0;
       keldata = 0;
-      var kec = document.getElementById("kecamatanya");
+      var kec = document.getElementById("zoneSelect");
       kecdata = kec.value;
-      var kel = document.getElementById("kelurahanya");
+      var kel = document.getElementById("kodekelurahan");
+      var kel2 = document.getElementById("kelurahanya");
       keldata = kel.value;
-      console.log(kecdata);
+      console.log(kel2.value);
+      if(kel2.value == 0){
+        keldata = 0;
+      }
+   
       
       urle = "<?php echo base_url().'dashboard/data_json_perpindahan/'?>"+kecdata+'/'+keldata;
       // if (x.style.display === "none") {
