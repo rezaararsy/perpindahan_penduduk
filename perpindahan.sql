@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Des 2022 pada 19.34
+-- Waktu pembuatan: 25 Des 2022 pada 15.35
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.28
 
@@ -18162,6 +18162,86 @@ INSERT INTO `perpindahan` (`id_perpindahan`, `kecamatan`, `kelurahan`, `rw`, `rt
 (18067, '3', '1007', '1', '2', '0', 'HAMIDAH SALSA BILLA', '1', 'SKDWNI/3573/01112022/0039', '2022-01-11', 'PERUMAHAN KAVLING SINAR BAROKAH'),
 (18068, '3', '1007', '1', '2', '0', 'ZAINUR ROZIKIN', '1', 'SKDWNI/3573/01112022/0038', '2022-01-11', 'PERUMAHAN KAVLING SINAR BAROKAH');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(150) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `role` int(11) NOT NULL,
+  `kecamatan` int(11) NOT NULL,
+  `kelurahan` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `role`, `kecamatan`, `kelurahan`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin Super', 101, 0, 0),
+(59, 'arjosari', '4282d69f55527cd1b521ed9b014922e3', 'Arjosari', 103, 1, 1002),
+(60, 'balearjosari', '4282d69f55527cd1b521ed9b014922e3', 'Balearjosari', 103, 1, 1001),
+(61, 'blimbing', '4282d69f55527cd1b521ed9b014922e3', 'Blimbing', 103, 1, 1005),
+(62, 'bunulrejo', '4282d69f55527cd1b521ed9b014922e3', 'Bunulrejo', 103, 1, 1008),
+(63, 'jodipan', '4282d69f55527cd1b521ed9b014922e3', 'Jodipan', 103, 1, 1011),
+(64, 'kesatrian', '4282d69f55527cd1b521ed9b014922e3', 'Kesatrian', 103, 1, 1009),
+(65, 'pandanwangi', '4282d69f55527cd1b521ed9b014922e3', 'Pandanwangi', 103, 1, 1006),
+(66, 'polehan', '4282d69f55527cd1b521ed9b014922e3', 'Polehan', 103, 1, 1010),
+(67, 'polowijen', '4282d69f55527cd1b521ed9b014922e3', 'Polowijen', 103, 1, 1003),
+(68, 'purwantoro', '4282d69f55527cd1b521ed9b014922e3', 'Purwantoro', 103, 1, 1007),
+(69, 'purwodadi', '4282d69f55527cd1b521ed9b014922e3', 'Purwodadi', 103, 1, 1004),
+(70, 'bareng', '4282d69f55527cd1b521ed9b014922e3', 'Bareng', 103, 2, 1009),
+(71, 'gadingasri', '4282d69f55527cd1b521ed9b014922e3', 'Gadingasri', 103, 2, 1010),
+(72, 'kasin', '4282d69f55527cd1b521ed9b014922e3', 'Kasin', 103, 2, 1006),
+(73, 'kauman', '4282d69f55527cd1b521ed9b014922e3', 'Kauman', 103, 2, 1007),
+(74, 'kiduldalem', '4282d69f55527cd1b521ed9b014922e3', 'Kiduldalem', 103, 2, 1004),
+(75, 'klojen', '4282d69f55527cd1b521ed9b014922e3', 'Klojen', 103, 2, 1001),
+(76, 'oro-oro dowo', '4282d69f55527cd1b521ed9b014922e3', 'Oro-Oro Dowo', 103, 2, 1008),
+(77, 'penanggungan', '4282d69f55527cd1b521ed9b014922e3', 'Penanggungan', 103, 2, 1011),
+(78, 'rampal celaket', '4282d69f55527cd1b521ed9b014922e3', 'Rampal Celaket', 103, 2, 1002),
+(79, 'samaan', '4282d69f55527cd1b521ed9b014922e3', 'Samaan', 103, 2, 1003),
+(80, 'sukoharjo', '4282d69f55527cd1b521ed9b014922e3', 'Sukoharjo', 103, 2, 1005),
+(81, 'arjowinangun', '4282d69f55527cd1b521ed9b014922e3', 'Arjowinangun', 103, 3, 1011),
+(82, 'bumiayu', '4282d69f55527cd1b521ed9b014922e3', 'Bumiayu', 103, 3, 1003),
+(83, 'buring', '4282d69f55527cd1b521ed9b014922e3', 'Buring', 103, 3, 1005),
+(84, 'cemorokandang', '4282d69f55527cd1b521ed9b014922e3', 'Cemorokandang', 103, 3, 1010),
+(85, 'kedungkandang', '4282d69f55527cd1b521ed9b014922e3', 'Kedungkandang', 103, 3, 1006),
+(86, 'kotalama', '4282d69f55527cd1b521ed9b014922e3', 'Kotalama', 103, 3, 1001),
+(87, 'lesanpuro', '4282d69f55527cd1b521ed9b014922e3', 'Lesanpuro', 103, 3, 1007),
+(88, 'madyopuro', '4282d69f55527cd1b521ed9b014922e3', 'Madyopuro', 103, 3, 1009),
+(89, 'mergosono', '4282d69f55527cd1b521ed9b014922e3', 'Mergosono', 103, 3, 1002),
+(90, 'sawojajar', '4282d69f55527cd1b521ed9b014922e3', 'Sawojajar', 103, 3, 1008),
+(91, 'tlogowaru', '4282d69f55527cd1b521ed9b014922e3', 'Tlogowaru', 103, 3, 1012),
+(92, 'wonokoyo', '4282d69f55527cd1b521ed9b014922e3', 'Wonokoyo', 103, 3, 1004),
+(93, 'bakalankrajan', '4282d69f55527cd1b521ed9b014922e3', 'Bakalankrajan', 103, 4, 1011),
+(94, 'bandulan', '4282d69f55527cd1b521ed9b014922e3', 'Bandulan', 103, 4, 1008),
+(95, 'bandungrejosari', '4282d69f55527cd1b521ed9b014922e3', 'Bandungrejosari', 103, 4, 1004),
+(96, 'ciptomulyo', '4282d69f55527cd1b521ed9b014922e3', 'Ciptomulyo', 103, 4, 1001),
+(97, 'gadang', '4282d69f55527cd1b521ed9b014922e3', 'Gadang', 103, 4, 1002),
+(98, 'karangbesuki', '4282d69f55527cd1b521ed9b014922e3', 'Karangbesuki', 103, 4, 1009),
+(99, 'kebonsari', '4282d69f55527cd1b521ed9b014922e3', 'Kebonsari', 103, 4, 1003),
+(100, 'mulyorejo', '4282d69f55527cd1b521ed9b014922e3', 'Mulyorejo', 103, 4, 1010),
+(101, 'pisangcandi', '4282d69f55527cd1b521ed9b014922e3', 'Pisangcandi', 103, 4, 1007),
+(102, 'sukun', '4282d69f55527cd1b521ed9b014922e3', 'Sukun', 103, 4, 1005),
+(103, 'tanjungrejo', '4282d69f55527cd1b521ed9b014922e3', 'Tanjungrejo', 103, 4, 1006),
+(104, 'dinoyo', '4282d69f55527cd1b521ed9b014922e3', 'Dinoyo', 103, 5, 1004),
+(105, 'jatimulyo', '4282d69f55527cd1b521ed9b014922e3', 'Jatimulyo', 103, 5, 1007),
+(106, 'ketawanggede', '4282d69f55527cd1b521ed9b014922e3', 'Ketawanggede', 103, 5, 1006),
+(107, 'lowokwaru', '4282d69f55527cd1b521ed9b014922e3', 'Lowokwaru', 103, 5, 1011),
+(108, 'merjosari', '4282d69f55527cd1b521ed9b014922e3', 'Merjosari', 103, 5, 1002),
+(109, 'mojolangu', '4282d69f55527cd1b521ed9b014922e3', 'Mojolangu', 103, 5, 1009),
+(110, 'sumbersari', '4282d69f55527cd1b521ed9b014922e3', 'Sumbersari', 103, 5, 1005),
+(111, 'tasikmadu', '4282d69f55527cd1b521ed9b014922e3', 'Tasikmadu', 103, 5, 1012),
+(112, 'tlogomas', '4282d69f55527cd1b521ed9b014922e3', 'Tlogomas', 103, 5, 1003),
+(113, 'tulusrejo', '4282d69f55527cd1b521ed9b014922e3', 'Tulusrejo', 103, 5, 1010),
+(114, 'tunggulwulung', '4282d69f55527cd1b521ed9b014922e3', 'Tunggulwulung', 103, 5, 1001),
+(115, 'tunjungsekar', '4282d69f55527cd1b521ed9b014922e3', 'Tunjungsekar', 103, 5, 1008);
+
 --
 -- Indexes for dumped tables
 --
@@ -18174,6 +18254,12 @@ ALTER TABLE `perpindahan`
   ADD UNIQUE KEY `skpwni` (`skpwni`);
 
 --
+-- Indeks untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -18182,6 +18268,12 @@ ALTER TABLE `perpindahan`
 --
 ALTER TABLE `perpindahan`
   MODIFY `id_perpindahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18069;
+
+--
+-- AUTO_INCREMENT untuk tabel `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
