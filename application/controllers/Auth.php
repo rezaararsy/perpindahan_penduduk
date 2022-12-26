@@ -137,8 +137,15 @@ class Auth extends CI_Controller {
 				if ($role == 101) {
 					redirect(base_url("dashboard"));
 				}				
-				elseif($role == 102){
-					redirect(base_url("pengguna"));		
+				elseif($role == 104){
+					// redirect(base_url("pengguna"));		
+					$data_session2 = array(
+						'kecamatan' => $ambile->row()->kecamatan,
+						'kelurahan' => $ambile->row()->kelurahan,
+						);
+					$this->session->set_userdata($data_session2);
+					$role = $this->session->userdata('role');
+					redirect(base_url("pengguna_okp"));	
 				}elseif($role == 103){
 					$data_session2 = array(
 						'kecamatan' => $ambile->row()->kecamatan,
