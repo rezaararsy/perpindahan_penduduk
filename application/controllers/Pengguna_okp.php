@@ -8,7 +8,7 @@ class Pengguna_okp extends CI_Controller {
 	    $this->load->model('m_data');
 	    $this->load->helper('url');
 		$this->load->library('datatables');
-	    if($this->session->userdata('status') != "login" && $this->session->userdata('role') != 101 ){
+	    if($this->session->userdata('status') != "login" || $this->session->userdata('role') != 104 ){
 		   redirect('');
 		  }
 
@@ -59,7 +59,7 @@ class Pengguna_okp extends CI_Controller {
 		$data = array(
 			'title' => "Dashboard"
 		);
-		$this->load->view('pengguna/data_pindah_kelurahan', $data);
+		$this->load->view('okp/data_pindah_kelurahan', $data);
 	}
 	public function data_json_perpindahan(){
 		header('Content-Type: application/json');

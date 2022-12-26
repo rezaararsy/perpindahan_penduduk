@@ -8,7 +8,7 @@ class Pengguna extends CI_Controller {
 	    $this->load->model('m_data');
 	    $this->load->helper('url');
 		$this->load->library('datatables');
-	    if($this->session->userdata('status') != "login" && $this->session->userdata('role') != 101 ){
+	    if($this->session->userdata('status') != "login" || $this->session->userdata('role') != 102 ){
 		   redirect('');
 		  }
 

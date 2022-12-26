@@ -17,7 +17,7 @@ $this->load->view('dist/_partials/header1');
           <div class="section-body">
             <!-- <h2 class="section-title">Advanced Forms</h2>
             <p class="section-lead">We provide advanced input fields, such as date picker, color picker, and so on.</p> -->
-            <form action="<?php echo base_url(). 'dashboard/inputData1'; ?>" method="post">
+            <form action="<?php echo base_url(). 'pengguna_okp/inputData1'; ?>" method="post">
             <div class="row">
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
@@ -25,10 +25,11 @@ $this->load->view('dist/_partials/header1');
                     <h4>Masukkan Perpindahan Penduduk</h4>
                   </div>
                   <div class="card-body">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label>Pilih Kecamatan</label>
                       <select required name="kecamatan" class="form-control" id="zoneSelect" onchange="updateChar()">
                         <option disabled selected value="">Pilih Kecamatan</option>
+                        <option value="<?php echo $this->session->userdata('kecamatan'); ?>" selected><?php echo $this->session->userdata('kecamatan'); ?></option>
                         <option value="1">Blimbing</option>
                         <option value="2">Klojen</option>
                         <option value="5">Lowokwaru</option>
@@ -40,28 +41,32 @@ $this->load->view('dist/_partials/header1');
                       <label>Pilih Kelurahan</label>
                       <select required name="kelurahan" class="form-control" id="kelurahanya" onchange="updateChar2()">
                       <option disabled selected value="">Pilih Kelurahan</option>
-
+                      <option value="kelurahan" selected><?php echo $this->session->userdata('kelurahan'); ?></option>
                       </select>
-                    </div>
+                    </div> -->
                     <div class="form-group">
-                      <label>Pilih RT</label>
-                      <select required name="rt" class="form-control" id="rtnya">
+                      <label>Masukkan RT</label>
+                      <input required name="rt" type="number" class="form-control">
+                      <!-- <select required name="rt" class="form-control" id="rtnya">
                       <option disabled selected value="">Pilih RT</option>
 
-                      </select>
+                      </select> -->
                     </div>
                     <div class="form-group">
-                      <label>Pilih RW</label>
-                      <select required name="rw" class="form-control" id="rwnya">
+                      <label>Masukkan RW</label>
+                      <input required name="rw" type="number" class="form-control">
+                      <!-- <select required name="rw" class="form-control" id="rwnya">
                       <option disabled selected value="">Pilih RW</option>
 
-                      </select>
+                      </select> -->
                     </div>
                     
                     <div class="form-group">
                       <label>Alamat di RT</label>
                       <input required name="alamat_rt" type="text" class="form-control">
-                      <input name="kodekelurahan" id="kodekelurahan" type="hidden" class="form-control">
+                      <input name="kecamatan" id="kecamatan" value="<?php echo $this->session->userdata('kecamatan'); ?>" type="hidden" class="form-control">
+                      <input name="kodekelurahan" id="kodekelurahan" value="<?php echo $this->session->userdata('kelurahan'); ?>" type="hidden" class="form-control">
+                      <!-- <input name="kodekelurahan" id="kodekelurahan" type="hidden" class="form-control"> -->
                     </div>
                     <!-- <div class="form-group">
                       <label>NIK Penduduk Yang Pindah</label>

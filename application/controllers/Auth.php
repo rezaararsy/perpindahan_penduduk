@@ -11,8 +11,17 @@ class Auth extends CI_Controller {
 		
 	  }
 	public function index() {
-		if($this->session->userdata('status') == "login" && $this->session->userdata('role') != 102){
+		if($this->session->userdata('status') == "login" && $this->session->userdata('role') != 102 && $this->session->userdata('role') != 104 && $this->session->userdata('role') != 103 && $this->session->userdata('role') != 101){
 			redirect('dashboard');
+		   }
+		   if($this->session->userdata('status') == "login" && $this->session->userdata('role') == 104){
+			redirect('pengguna_okp');
+		   }
+		   if($this->session->userdata('status') == "login" && $this->session->userdata('role') == 103){
+			redirect('pengguna_kelurahan');
+		   }
+		   if($this->session->userdata('status') == "login" && $this->session->userdata('role') == 101){
+			redirect('pengguna');
 		   }
 		$data = array(
 			'title' => "Aplikasi Pelaporan Perpindahan Penduduk"
