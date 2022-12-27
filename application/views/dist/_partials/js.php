@@ -642,9 +642,9 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {"data": "jenis_pindah",
                             render: function (data, type, row, meta) {
                                 if(data==1){
-                                  return 'Pindah Masuk';
+                                  return '<span class="badge badge-success">Pindah Masuk</span>';
                                 }else{
-                                  return 'Pindah Keluar';
+                                  return '<span class="badge badge-warning">Pindah Keluar</span>';
                                 }
                             }},
                             {
@@ -733,9 +733,9 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {"data": "jenis_pindah",
                             render: function (data, type, row, meta) {
                                 if(data==1){
-                                  return 'Pindah Masuk';
+                                  return '<span class="badge badge-success">Pindah Masuk</span>';
                                 }else{
-                                  return 'Pindah Keluar';
+                                  return '<span class="badge badge-warning">Pindah Keluar</span>';
                                 }
                             }}
                       ]
@@ -810,10 +810,10 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
                             render: function (data, type, row, meta) {
-                                if(data==1){
-                                  return 'Pindah Masuk';
+                              if(data==1){
+                                  return '<span class="badge badge-success">Pindah Masuk</span>';
                                 }else{
-                                  return 'Pindah Keluar';
+                                  return '<span class="badge badge-warning">Pindah Keluar</span>';
                                 }
                             }}
                       ]
@@ -889,9 +889,9 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {"data": "jenis_pindah",
                             render: function (data, type, row, meta) {
                                 if(data==1){
-                                  return 'Pindah Masuk';
+                                  return '<span class="badge badge-success">Pindah Masuk</span>';
                                 }else{
-                                  return 'Pindah Keluar';
+                                  return '<span class="badge badge-warning">Pindah Keluar</span>';
                                 }
                             }}
                       ]
