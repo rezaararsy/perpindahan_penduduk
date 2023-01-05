@@ -82,7 +82,16 @@ class Pengguna_okp extends CI_Controller {
 		);
 		$this->load->view('okp/add_data_perpindahan_keluar', $data);
 	}
-	
+	private function stringToSecret(string $string = NULL)
+	{
+		if (!$string) {
+			return NULL;
+		}
+		$length = strlen($string);
+		$visibleCount = (int) round($length / 8);
+		$hiddenCount = $length - ($visibleCount * 2);
+		return substr($string, 0, $visibleCount) . str_repeat('*', $hiddenCount) . substr($string, ($visibleCount * -1), $visibleCount);
+	}
     public function inputData()
 	{
 		$kecamatan = $this->input->post('kecamatan');
@@ -91,7 +100,7 @@ class Pengguna_okp extends CI_Controller {
 		$rt = $this->input->post('rt');
 		$nik = 0;
 		$str = $this->input->post('nama');
-		$nama = substr($str,0,3)."******".substr($str,(strlen($str))-3,3);
+		$nama = $this->stringToSecret($str);
 		$jenis_pindah =1;
 		$skpwni = $this->input->post('skpwni');
 		$tgl_pindah = $this->input->post('tgl_pindah');
@@ -122,7 +131,7 @@ class Pengguna_okp extends CI_Controller {
 		$rt = $this->input->post('rt');
 		$nik = 0;
 		$str = $this->input->post('nama');
-		$nama = substr($str,0,3)."******".substr($str,(strlen($str))-3,3);
+		$nama = $this->stringToSecret($str);
 		$jenis_pindah = 2;
 		$skpwni = $this->input->post('skpwni');
 		$tgl_pindah = $this->input->post('tgl_pindah');

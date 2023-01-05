@@ -126,7 +126,16 @@ class Dashboard extends CI_Controller {
         $this->session->set_flashdata('message', 'Data Berhasil di Hapus');
 		redirect(base_url("dashboard/data_pindah"));    
     }
-	
+	private function stringToSecret(string $string = NULL)
+	{
+		if (!$string) {
+			return NULL;
+		}
+		$length = strlen($string);
+		$visibleCount = (int) round($length / 8);
+		$hiddenCount = $length - ($visibleCount * 2);
+		return substr($string, 0, $visibleCount) . str_repeat('*', $hiddenCount) . substr($string, ($visibleCount * -1), $visibleCount);
+	}
 
 	public function inputData()
 	{
@@ -135,7 +144,8 @@ class Dashboard extends CI_Controller {
 		$rw = $this->input->post('rw');
 		$rt = $this->input->post('rt');
 		$nik = 0;
-		$nama = $this->input->post('nama');
+		$str = $this->input->post('nama');
+		$nama = $this->stringToSecret($str);
 		$jenis_pindah =1;
 		$skpwni = $this->input->post('skpwni');
 		$tgl_pindah = $this->input->post('tgl_pindah');
@@ -165,7 +175,8 @@ class Dashboard extends CI_Controller {
 		$rw = $this->input->post('rw');
 		$rt = $this->input->post('rt');
 		$nik = 0;
-		$nama = $this->input->post('nama');
+		$str = $this->input->post('nama');
+		$nama = $this->stringToSecret($str);
 		$jenis_pindah = 2;
 		$skpwni = $this->input->post('skpwni');
 		$tgl_pindah = $this->input->post('tgl_pindah');
