@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 05 Jan 2023 pada 05.38
--- Versi server: 10.4.24-MariaDB
--- Versi PHP: 7.4.28
+-- Host: localhost
+-- Waktu pembuatan: 07 Jan 2023 pada 15.26
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18211,7 +18211,7 @@ INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `role`, `kecamata
 (73, 'kauman', '4282d69f55527cd1b521ed9b014922e3', 'Kauman', 103, 2, 1007),
 (74, 'kiduldalem', '4282d69f55527cd1b521ed9b014922e3', 'Kiduldalem', 103, 2, 1004),
 (75, 'klojen', '4282d69f55527cd1b521ed9b014922e3', 'Klojen', 103, 2, 1001),
-(76, 'oro-oro dowo', '4282d69f55527cd1b521ed9b014922e3', 'Oro-Oro Dowo', 103, 2, 1008),
+(76, 'oroorodowo', '4282d69f55527cd1b521ed9b014922e3', 'Oro-Oro Dowo', 103, 2, 1008),
 (77, 'penanggungan', '4282d69f55527cd1b521ed9b014922e3', 'Penanggungan', 103, 2, 1011),
 (78, 'rampal celaket', '4282d69f55527cd1b521ed9b014922e3', 'Rampal Celaket', 103, 2, 1002),
 (79, 'samaan', '4282d69f55527cd1b521ed9b014922e3', 'Samaan', 103, 2, 1003),
@@ -18250,18 +18250,73 @@ INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `role`, `kecamata
 (112, 'tlogomas', '4282d69f55527cd1b521ed9b014922e3', 'Tlogomas', 103, 5, 1003),
 (113, 'tulusrejo', '4282d69f55527cd1b521ed9b014922e3', 'Tulusrejo', 103, 5, 1010),
 (114, 'tunggulwulung', '4282d69f55527cd1b521ed9b014922e3', 'Tunggulwulung', 103, 5, 1001),
-(115, 'tunjungsekar', '4282d69f55527cd1b521ed9b014922e3', 'Tunjungsekar', 103, 5, 1008);
+(115, 'tunjungsekar', '4282d69f55527cd1b521ed9b014922e3', 'Tunjungsekar', 103, 5, 1008),
+(222, 'okparjosari', '4282d69f55527cd1b521ed9b014922e3', 'Arjosari', 104, 1, 1002),
+(223, 'okpbalearjosari', '4282d69f55527cd1b521ed9b014922e3', 'Balearjosari', 104, 1, 1001),
+(224, 'okpblimbing', '4282d69f55527cd1b521ed9b014922e3', 'Blimbing', 104, 1, 1005),
+(225, 'okpbunulrejo', '4282d69f55527cd1b521ed9b014922e3', 'Bunulrejo', 104, 1, 1008),
+(226, 'okpjodipan', '4282d69f55527cd1b521ed9b014922e3', 'Jodipan', 104, 1, 1011),
+(227, 'okpkesatrian', '4282d69f55527cd1b521ed9b014922e3', 'Kesatrian', 104, 1, 1009),
+(228, 'okppandanwangi', '4282d69f55527cd1b521ed9b014922e3', 'Pandanwangi', 104, 1, 1006),
+(229, 'okppolehan', '4282d69f55527cd1b521ed9b014922e3', 'Polehan', 104, 1, 1010),
+(230, 'okppolowijen', '4282d69f55527cd1b521ed9b014922e3', 'Polowijen', 104, 1, 1003),
+(231, 'okppurwantoro', '4282d69f55527cd1b521ed9b014922e3', 'Purwantoro', 104, 1, 1007),
+(232, 'okppurwodadi', '4282d69f55527cd1b521ed9b014922e3', 'Purwodadi', 104, 1, 1004),
+(233, 'okpbareng', '4282d69f55527cd1b521ed9b014922e3', 'Bareng', 104, 2, 1009),
+(234, 'okpgadingasri', '4282d69f55527cd1b521ed9b014922e3', 'Gadingasri', 104, 2, 1010),
+(235, 'okpkasin', '4282d69f55527cd1b521ed9b014922e3', 'Kasin', 104, 2, 1006),
+(236, 'okpkauman', '4282d69f55527cd1b521ed9b014922e3', 'Kauman', 104, 2, 1007),
+(237, 'okpkiduldalem', '4282d69f55527cd1b521ed9b014922e3', 'Kiduldalem', 104, 2, 1004),
+(238, 'okpklojen', '4282d69f55527cd1b521ed9b014922e3', 'Klojen', 104, 2, 1001),
+(239, 'okporoorodowo', '4282d69f55527cd1b521ed9b014922e3', 'OroOroDowo', 104, 2, 1008),
+(240, 'okppenanggungan', '4282d69f55527cd1b521ed9b014922e3', 'Penanggungan', 104, 2, 1011),
+(241, 'okprampalcelaket', '4282d69f55527cd1b521ed9b014922e3', 'RampalCelaket', 104, 2, 1002),
+(242, 'okpsamaan', '4282d69f55527cd1b521ed9b014922e3', 'Samaan', 104, 2, 1003),
+(243, 'okpsukoharjo', '4282d69f55527cd1b521ed9b014922e3', 'Sukoharjo', 104, 2, 1005),
+(244, 'okparjowinangun', '4282d69f55527cd1b521ed9b014922e3', 'Arjowinangun', 104, 3, 1011),
+(245, 'okpbumiayu', '4282d69f55527cd1b521ed9b014922e3', 'Bumiayu', 104, 3, 1003),
+(246, 'okpburing', '4282d69f55527cd1b521ed9b014922e3', 'Buring', 104, 3, 1005),
+(247, 'okpcemorokandang', '4282d69f55527cd1b521ed9b014922e3', 'Cemorokandang', 104, 3, 1010),
+(248, 'okpkedungkandang', '4282d69f55527cd1b521ed9b014922e3', 'Kedungkandang', 104, 3, 1006),
+(249, 'okpkotalama', '4282d69f55527cd1b521ed9b014922e3', 'Kotalama', 104, 3, 1001),
+(250, 'okplesanpuro', '4282d69f55527cd1b521ed9b014922e3', 'Lesanpuro', 104, 3, 1007),
+(251, 'okpmadyopuro', '4282d69f55527cd1b521ed9b014922e3', 'Madyopuro', 104, 3, 1009),
+(252, 'okpmergosono', '4282d69f55527cd1b521ed9b014922e3', 'Mergosono', 104, 3, 1002),
+(253, 'okpsawojajar', '4282d69f55527cd1b521ed9b014922e3', 'Sawojajar', 104, 3, 1008),
+(254, 'okptlogowaru', '4282d69f55527cd1b521ed9b014922e3', 'Tlogowaru', 104, 3, 1012),
+(255, 'okpwonokoyo', '4282d69f55527cd1b521ed9b014922e3', 'Wonokoyo', 104, 3, 1004),
+(256, 'okpbakalankrajan', '4282d69f55527cd1b521ed9b014922e3', 'Bakalankrajan', 104, 4, 1011),
+(257, 'okpbandulan', '4282d69f55527cd1b521ed9b014922e3', 'Bandulan', 104, 4, 1008),
+(258, 'okpbandungrejosari', '4282d69f55527cd1b521ed9b014922e3', 'Bandungrejosari', 104, 4, 1004),
+(259, 'okpciptomulyo', '4282d69f55527cd1b521ed9b014922e3', 'Ciptomulyo', 104, 4, 1001),
+(260, 'okpgadang', '4282d69f55527cd1b521ed9b014922e3', 'Gadang', 104, 4, 1002),
+(261, 'okpkarangbesuki', '4282d69f55527cd1b521ed9b014922e3', 'Karangbesuki', 104, 4, 1009),
+(262, 'okpkebonsari', '4282d69f55527cd1b521ed9b014922e3', 'Kebonsari', 104, 4, 1003),
+(263, 'okpmulyorejo', '4282d69f55527cd1b521ed9b014922e3', 'Mulyorejo', 104, 4, 1010),
+(264, 'okppisangcandi', '4282d69f55527cd1b521ed9b014922e3', 'Pisangcandi', 104, 4, 1007),
+(265, 'okpsukun', '4282d69f55527cd1b521ed9b014922e3', 'Sukun', 104, 4, 1005),
+(266, 'okptanjungrejo', '4282d69f55527cd1b521ed9b014922e3', 'Tanjungrejo', 104, 4, 1006),
+(267, 'okpdinoyo', '4282d69f55527cd1b521ed9b014922e3', 'Dinoyo', 104, 5, 1004),
+(268, 'okpjatimulyo', '4282d69f55527cd1b521ed9b014922e3', 'Jatimulyo', 104, 5, 1007),
+(269, 'okpketawanggede', '4282d69f55527cd1b521ed9b014922e3', 'Ketawanggede', 104, 5, 1006),
+(270, 'okplowokwaru', '4282d69f55527cd1b521ed9b014922e3', 'Lowokwaru', 104, 5, 1011),
+(271, 'okpmerjosari', '4282d69f55527cd1b521ed9b014922e3', 'Merjosari', 104, 5, 1002),
+(272, 'okpmojolangu', '4282d69f55527cd1b521ed9b014922e3', 'Mojolangu', 104, 5, 1009),
+(273, 'okpsumbersari', '4282d69f55527cd1b521ed9b014922e3', 'Sumbersari', 104, 5, 1005),
+(274, 'okptasikmadu', '4282d69f55527cd1b521ed9b014922e3', 'Tasikmadu', 104, 5, 1012),
+(275, 'okptlogomas', '4282d69f55527cd1b521ed9b014922e3', 'Tlogomas', 104, 5, 1003),
+(276, 'okptulusrejo', '4282d69f55527cd1b521ed9b014922e3', 'Tulusrejo', 104, 5, 1010),
+(277, 'okptunggulwulung', '4282d69f55527cd1b521ed9b014922e3', 'Tunggulwulung', 104, 5, 1001),
+(278, 'okptunjungsekar', '4282d69f55527cd1b521ed9b014922e3', 'Tunjungsekar', 104, 5, 1008),
+(279, 'kecblimbing', '4282d69f55527cd1b521ed9b014922e3', 'Blimbing', 105, 1, 0),
+(280, 'kecklojen', '4282d69f55527cd1b521ed9b014922e3', 'Klojen', 105, 2, 0),
+(281, 'keckedungkandang', '4282d69f55527cd1b521ed9b014922e3', 'Kedungkandang', 105, 3, 0),
+(282, 'kecsukun', '4282d69f55527cd1b521ed9b014922e3', 'Sukun', 105, 4, 0),
+(283, 'keclowokwaru', '4282d69f55527cd1b521ed9b014922e3', 'Lowokwaru', 105, 5, 0);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indeks untuk tabel `perpindahan`
---
-ALTER TABLE `perpindahan`
-  ADD PRIMARY KEY (`id_perpindahan`),
-  ADD UNIQUE KEY `skpwni` (`skpwni`);
 
 --
 -- Indeks untuk tabel `user`
@@ -18274,16 +18329,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT untuk tabel `perpindahan`
---
-ALTER TABLE `perpindahan`
-  MODIFY `id_perpindahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18074;
-
---
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

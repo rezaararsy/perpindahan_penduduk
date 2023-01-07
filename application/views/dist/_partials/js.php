@@ -898,6 +898,84 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                 });
             } );
 
+            $(document).ready( function () {
+                $('#table_id5').DataTable({
+                processing: true,
+                serverSide: true,
+                      ajax: {"url": "<?php echo base_url().'pengguna_kecamatan/data_json_perpindahan/'?>", "type": "POST"},
+                      columns: [
+                            {"data": "id_perpindahan"},
+                            {"data": "nama",
+                            render: function (data, type, row, meta) {
+                              // const mask = "*";
+                              // let maskedName = data.substring(0,10) + mask.repeat(data.length-4) + data.slice(-5);
+                              // return maskedName;
+                              return data;
+                            }},
+                            {"data": "kecamatan",
+                            render: function (data, type, row, meta) {
+                                if(data==1){
+                                  return 'Blimbing';
+                                }else if(data==2){
+                                  return 'Klojen';
+                                }else if(data==5){
+                                  return 'Lowokwaru';
+                                }else if(data==3){
+                                  return 'Kedungkandang';
+                                }else if(data==4){
+                                  return 'Sukun';
+                                }
+                            }},
+                            {"data": "kelurahan",
+                            render: function (data, type, row, meta) {
+                              // if(row['kecamatan']==1){
+                              //   return blimbing[data];
+                            
+                              // }else if(row['kecamatan']==2){
+                              //   return klojen[data];
+                             
+                              // }else if(row['kecamatan']==5){
+                              //   return lowokwaru[data];
+                             
+                              // }else if(row['kecamatan']==3){
+                              //   return kedungkandang[data];
+                             
+                              // }else if(row
+                              // ['kecamatan']==4){
+                              //   return sukun[data];
+                              // }
+                              if(row['kecamatan']==1){
+                                return blimbing[kodeblimbing.indexOf(parseInt(data))];
+                            
+                              }else if(row['kecamatan']==2){
+                                return klojen[kodeklojen.indexOf(parseInt(data))];
+                             
+                              }else if(row['kecamatan']==5){
+                                return lowokwaru[kodelowokwaru.indexOf(parseInt(data))];
+                             
+                              }else if(row['kecamatan']==3){
+                                return kedungkandang[kodekedungkandang.indexOf(parseInt(data))];
+                             
+                              }else if(row['kecamatan']==4){
+                                return sukun[kodesukun.indexOf(parseInt(data))];
+                              }
+                            }},
+                            {"data": "rw"},
+                            {"data": "rt"},
+                            {"data": "alamat_rt"},
+                            {"data": "tgl_pindah"},
+                            {"data": "jenis_pindah",
+                            render: function (data, type, row, meta) {
+                              if(data==1){
+                                  return '<span class="badge badge-success">Pindah Masuk</span>';
+                                }else{
+                                  return '<span class="badge badge-warning">Pindah Keluar</span>';
+                                }
+                            }}
+                      ]
+                });
+            } );
+
             $('#table_id').on('click','.hapus_record',function(){
                     var id_perpindahan=$(this).data('kode');
                     $('#ModalHapus').modal('show');

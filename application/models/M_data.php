@@ -113,6 +113,22 @@ class M_Data extends CI_Model
     $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=2  AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
         return $hasil->num_rows();
   }
+  function get_masuk1kecamatan($kecamatan){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=1 AND kecamatan=$kecamatan");
+        return $hasil->num_rows();
+  }
+  function get_keluar1kecamatan($kecamatan){
+    $hasil=$this->db->query("SELECT * FROM perpindahan WHERE jenis_pindah=2  AND kecamatan=$kecamatan");
+        return $hasil->num_rows();
+  }
+  function get_bulan_keluarpenggunakecamatan($tahun,$bulan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 2 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun' AND kecamatan=$kecamatan");
+    return $hasil->num_rows();
+  }
+  function get_bulan_datangpenggunakecamatan($tahun,$bulan,$kecamatan){
+    $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 1 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun' AND kecamatan=$kecamatan");
+    return $hasil->num_rows();
+  }
   function get_bulan_keluarpenggunakelurahan($tahun,$bulan,$kelurahan,$kecamatan){
     $hasil=$this->db->query("SELECT * FROM `perpindahan` WHERE jenis_pindah = 2 AND MONTH(tgl_pindah) = '$bulan' AND YEAR(tgl_pindah) = '$tahun' AND kelurahan=$kelurahan AND kecamatan=$kecamatan");
     return $hasil->num_rows();
