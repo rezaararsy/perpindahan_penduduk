@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 07 Jan 2023 pada 15.26
+-- Waktu pembuatan: 08 Jan 2023 pada 11.15
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -18193,7 +18193,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `nama`, `role`, `kecamatan`, `kelurahan`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin Super', 101, 0, 0),
+(1, 'admin', '6fdeee332e03617164a29bbb9b299218', 'Admin Super', 101, 0, 0),
 (59, 'arjosari', '4282d69f55527cd1b521ed9b014922e3', 'Arjosari', 103, 1, 1002),
 (60, 'balearjosari', '4282d69f55527cd1b521ed9b014922e3', 'Balearjosari', 103, 1, 1001),
 (61, 'blimbing', '4282d69f55527cd1b521ed9b014922e3', 'Blimbing', 103, 1, 1005),
