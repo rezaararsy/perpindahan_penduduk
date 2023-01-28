@@ -46,7 +46,15 @@ class Auth extends CI_Controller {
 		// password blimbing01011 = kecamatan-rt-rw
 		// password sementara = malangkota1987
 		// sukun = 4100504001
-		// merjosari = 5100211009
+		// merjosari = 5100211009 RW 11 RT 9 5100211 RW 9
+
+		// abbbbxxyyy
+
+		// a : Kode Kecamatan
+		// b : Kode Kelurahan
+		// c : Kode RW 
+		// d : Kode RT
+		
 		$blimbing = array("Arjosari", "Balearjosari", "Blimbing", "Bunulrejo", "Jodipan", "Kesatrian", "Pandanwangi", "Polehan", "Polowijen", "Purwantoro", "Purwodadi");
 		$kodeblimbing = array(1002,1001,1005,1008,1011,1009,1006,1010,1003,1007,1004);
 		$kedungkandang = array("Arjowinangun", "Bumiayu", "Buring", "Cemorokandang", "Kedungkandang", "Kotalama", "Lesanpuro", "Madyopuro", "Mergosono", "Sawojajar", "Tlogowaru", "Wonokoyo");
@@ -103,24 +111,46 @@ class Auth extends CI_Controller {
 		// 	$nama_user =  "$user_kecamatan $sukun[$kelurahanya] RW $rwnya RT $rtnya";
 		// }
 
-		if($kecamatanya == 1){
-			$user_kecamatan = "Blimbing";
-			$nama_user =  "RW $rwnya RT $rtnya";
-		}elseif($kecamatanya == 2){
-			$user_kecamatan = "Klojen";
-			$nama_user =  "RW $rwnya RT $rtnya";
-		}elseif($kecamatanya == 5){
-			$user_kecamatan = "Lowokwaru";
-			// $nama_user =  " RW $rwnya RT $rtnya";
-			$nama_user =  "RW $rwnya RT $rtnya";
-		}elseif($kecamatanya == 3){
-			$user_kecamatan = "Kedungkandang";
-			$nama_user =  "RW $rwnya RT $rtnya";
-		}elseif($kecamatanya == 4){
-			$user_kecamatan = "Sukun";
-			$nama_user =  "RW $rwnya RT $rtnya";
+		if(rtnya==0){
+			if($kecamatanya == 1){
+				$user_kecamatan = "Blimbing";
+				$nama_user =  "RW $rwnya";
+			}elseif($kecamatanya == 2){
+				$user_kecamatan = "Klojen";
+				$nama_user =  "RW $rwnya";
+			}elseif($kecamatanya == 5){
+				$user_kecamatan = "Lowokwaru";
+				// $nama_user =  " RW $rwnya RT $rtnya";
+				$nama_user =  "RW $rwnya";
+			}elseif($kecamatanya == 3){
+				$user_kecamatan = "Kedungkandang";
+				$nama_user =  "RW $rwnya";
+			}elseif($kecamatanya == 4){
+				$user_kecamatan = "Sukun";
+				$nama_user =  "RW $rwnya ";
+			}
+	
+		}else{
+			if($kecamatanya == 1){
+				$user_kecamatan = "Blimbing";
+				$nama_user =  "RW $rwnya RT $rtnya";
+			}elseif($kecamatanya == 2){
+				$user_kecamatan = "Klojen";
+				$nama_user =  "RW $rwnya RT $rtnya";
+			}elseif($kecamatanya == 5){
+				$user_kecamatan = "Lowokwaru";
+				// $nama_user =  " RW $rwnya RT $rtnya";
+				$nama_user =  "RW $rwnya RT $rtnya";
+			}elseif($kecamatanya == 3){
+				$user_kecamatan = "Kedungkandang";
+				$nama_user =  "RW $rwnya RT $rtnya";
+			}elseif($kecamatanya == 4){
+				$user_kecamatan = "Sukun";
+				$nama_user =  "RW $rwnya RT $rtnya";
+			}
+	
 		}
-
+		
 		
 
 		// echo $kecamatanya;
@@ -176,18 +206,33 @@ class Auth extends CI_Controller {
 					redirect(base_url("pengguna_kecamatan"));		
 				}
 			}elseif($password == "malangkota1987"){
-				$data_session = array(
-					'nama' => $nama_user,
-					'role' => 102,
-					'id_user' => $nama_user,
-					'status' => "login",
-					'kecamatan' => $kecamatanya,
-					'kelurahan' => $kelurahanya,
-					'rw' => $rwnya,
-					'rt' => $rtnya,
-					);
-				$this->session->set_userdata($data_session);
-				redirect(base_url("pengguna"));			
+				if($rwnya!=null && $rtnya==0){
+					$data_session = array(
+						'nama' => $nama_user,
+						'role' => 106,
+						'id_user' => $nama_user,
+						'status' => "login",
+						'kecamatan' => $kecamatanya,
+						'kelurahan' => $kelurahanya,
+						'rw' => $rwnya,
+						);
+					$this->session->set_userdata($data_session);
+					redirect(base_url("pengguna_rw"));	
+				}else{
+					$data_session = array(
+						'nama' => $nama_user,
+						'role' => 102,
+						'id_user' => $nama_user,
+						'status' => "login",
+						'kecamatan' => $kecamatanya,
+						'kelurahan' => $kelurahanya,
+						'rw' => $rwnya,
+						'rt' => $rtnya,
+						);
+					$this->session->set_userdata($data_session);
+					redirect(base_url("pengguna"));	
+				}
+						
 			}
 			else{
 			$this->session->set_flashdata('message', 'Username atau Password Salah');

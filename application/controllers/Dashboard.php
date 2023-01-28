@@ -270,7 +270,8 @@ class Dashboard extends CI_Controller {
 		$inserdata[$i]['kelurahan'] = $value['B'];
 		$inserdata[$i]['rw'] = $value['C'];
 		$inserdata[$i]['rt'] = $value['D'];
-		$inserdata[$i]['nama'] = $value['E'];
+		$nama = $this->stringToSecret($value['E']);
+		$inserdata[$i]['nama'] = $nama;
 		$inserdata[$i]['jenis_pindah'] = $value['F'];
 		$inserdata[$i]['skpwni'] = $value['G'];
 		$inserdata[$i]['tgl_pindah'] = $value['H'];

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
-        <div class="sidebar-brand">
+          <div class="sidebar-brand">
           <img src="<?php echo base_url(); ?>assets/logo.png" alt="logo" width="30" style="background-color:white;">
             <a href="<?php echo base_url(); ?>">LAPOR PAK!</a>
           </div>
@@ -17,8 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               <ul class="dropdown-menu">
-              <li class="<?php echo $this->uri->segment(2) == 'dashboard' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>pengguna">Home</a></li>
-              <li class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>pengguna/data_pindah">Perpindahan Penduduk</a></li>
+              <li class="<?php echo $this->uri->segment(2) == 'dashboard' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>pengguna_rw">Home</a></li>
+              <li class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>pengguna_rw/data_pindah">Perpindahan Penduduk</a></li>
                 <!-- <li class="<?php echo $this->uri->segment(2) == 'index_0' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dist/index_0">General Dashboard</a></li>
                 <li class="<?php echo $this->uri->segment(2) == '' || $this->uri->segment(2) == 'index' ? 'active' : ''; ?>"><a class="nav-link" href="<?php echo base_url(); ?>dist/index">Ecommerce Dashboard</a></li> -->
               </ul>
