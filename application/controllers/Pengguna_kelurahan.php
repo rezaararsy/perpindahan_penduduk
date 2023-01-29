@@ -34,7 +34,8 @@ class Pengguna_kelurahan extends CI_Controller {
 			'8' => $this->m_data->get_bulan_keluarpenggunakelurahan(2022,8,$kelurahan,$kecamatan),
 			'9' => $this->m_data->get_bulan_keluarpenggunakelurahan(2022,9,$kelurahan,$kecamatan),
 			'10' => $this->m_data->get_bulan_keluarpenggunakelurahan(2022,10,$kelurahan,$kecamatan),
-			'11' => $this->m_data->get_bulan_keluarpenggunakelurahan(2022,11,$kelurahan,$kecamatan)	
+			'11' => $this->m_data->get_bulan_keluarpenggunakelurahan(2022,11,$kelurahan,$kecamatan),
+			'12' => $this->m_data->get_bulan_keluarpenggunakelurahan(2022,12,$kelurahan,$kecamatan)	
 		);
 		$data['pindahdatang'] = array(
 			'3' => $this->m_data->get_bulan_datangpenggunakelurahan(2022,3,$kelurahan,$kecamatan),
@@ -45,7 +46,8 @@ class Pengguna_kelurahan extends CI_Controller {
 			'8' => $this->m_data->get_bulan_datangpenggunakelurahan(2022,8,$kelurahan,$kecamatan),
 			'9' => $this->m_data->get_bulan_datangpenggunakelurahan(2022,9,$kelurahan,$kecamatan),
 			'10' => $this->m_data->get_bulan_datangpenggunakelurahan(2022,10,$kelurahan,$kecamatan),
-			'11' => $this->m_data->get_bulan_datangpenggunakelurahan(2022,11,$kelurahan,$kecamatan)
+			'11' => $this->m_data->get_bulan_datangpenggunakelurahan(2022,11,$kelurahan,$kecamatan),
+			'12' => $this->m_data->get_bulan_datangpenggunakelurahan(2022,12,$kelurahan,$kecamatan)
 		);
 		$this->load->view('pengguna/pengguna', $data);
         // $datam = $this->m_data->get_masuk1($rt,$rw,$kelurahan,$kecamatan);

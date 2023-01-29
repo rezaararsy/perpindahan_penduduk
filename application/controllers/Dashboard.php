@@ -33,7 +33,8 @@ class Dashboard extends CI_Controller {
 			'8' => $this->m_data->get_bulan_keluar(2022,8),
 			'9' => $this->m_data->get_bulan_keluar(2022,9),
 			'10' => $this->m_data->get_bulan_keluar(2022,10),
-			'11' => $this->m_data->get_bulan_keluar(2022,11)	
+			'11' => $this->m_data->get_bulan_keluar(2022,11),
+			'12' => $this->m_data->get_bulan_keluar(2022,12)	
 		);
 		$data['pindahdatang'] = array(
 			'3' => $this->m_data->get_bulan_datang(2022,3),
@@ -44,7 +45,8 @@ class Dashboard extends CI_Controller {
 			'8' => $this->m_data->get_bulan_datang(2022,8),
 			'9' => $this->m_data->get_bulan_datang(2022,9),
 			'10' => $this->m_data->get_bulan_datang(2022,10),
-			'11' => $this->m_data->get_bulan_datang(2022,11)
+			'11' => $this->m_data->get_bulan_datang(2022,11),
+			'12' => $this->m_data->get_bulan_datang(2022,12)
 		);
 		$data['pindahluarblimbing'] = $this->m_data->get_keluar11(1);
 		$data['pindahluarklojen'] = $this->m_data->get_keluar11(2);
