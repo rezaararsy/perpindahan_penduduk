@@ -105,7 +105,7 @@ $this->load->view('dist/_partials/header1');
         </section>
       </div>
 
-      <form id="add-row-form" action="<?php echo base_url().'dashboard/update'?>" method="post"
+      <form id="add-row-form" action="<?php echo base_url().'dashboard/updateData'?>" method="post"
         enctype="multipart/form-data">
         <div class="modal fade" id="ModalUpdate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
