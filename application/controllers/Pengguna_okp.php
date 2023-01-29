@@ -155,6 +155,41 @@ class Pengguna_okp extends CI_Controller {
 		redirect(base_url("pengguna_okp"));
 	}
 
+	public function updateData()
+	{	
+		$id=$this->input->post('id_perpindahan');
+		// $kecamatan = $this->input->post('kecamatan');
+		// $kelurahan = $this->input->post('kelurahan');
+		$rw = $this->input->post('rw');
+		$rt = $this->input->post('rt');
+		// $nik = $this->input->post('nik');
+		//$nik = 0;
+		$str = $this->input->post('nama');
+		$nama = $this->stringToSecret($str);
+		$jenis_pindah = $this->input->post('jenis_pindah');
+		$skpwni = $this->input->post('skpwni');
+		$tgl_pindah = $this->input->post('tgl_pindah');
+		$alamat_rt = $this->input->post('alamat_rt');
+		$data = array(
+		// 'kecamatan' => $kecamatan,
+		// 'kelurahan' => $kelurahan,
+		'rw' => $rw,
+		'rt' => $rt,
+		'nik' => $nik,
+		'nama' => $nama,
+		'jenis_pindah' => $jenis_pindah,
+		'skpwni' => $skpwni,
+		'tgl_pindah' => $tgl_pindah,
+		'alamat_rt' => $alamat_rt
+		);
+		
+		$this->db->where('id_perpindahan',$id);
+        $this->db->update('perpindahan', $data);
+
+		$this->session->set_flashdata('message', 'Berhasil mengupdate data');
+		redirect(base_url("pengguna_okp/data_pindah"));
+	}
+
 
 
 }

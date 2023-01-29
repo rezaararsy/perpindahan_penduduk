@@ -635,8 +635,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                 return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
-                            {"data": "rw"},
                             {"data": "rt"},
+                            {"data": "rw"},
                             {"data": "alamat_rt"},
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
@@ -650,9 +650,9 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                             {
                     "data": "alamat_rt",
                     render: function (data, type, row, meta) {
-                      return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td></td>';
+                      //return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td></td>';
                       // return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td><a style="margin-left:10px;margin-top:15px;" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-warning batal_record">Batal Pindah</a></td>';
-                        // return '<td><a href="javascript:void(0);" onclick="updateChar()" data-kecamatan="'+row['kecamatan']+'" data-kelurahan="'+row['kelurahan']+'" data-rw="'+row['rw']+'" data-rt="'+row['rt']+'" data-nik="'+row['nik']+'" data-nama="'+row['nama']+'" data-jenis_pindah="'+row['jenis_pindah']+'" data-skpwni="'+row['skpwni']+'" data-tgl_pindah="'+row['tgl_pindah']+'" data-alamat_rt="'+row['alamat_rt']+'" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
+                        return '<td><a href="javascript:void(0);" onclick="updateChar()" data-kecamatan="'+row['kecamatan']+'" data-kelurahan="'+row['kelurahan']+'" data-rw="'+row['rw']+'" data-rt="'+row['rt']+'" data-nik="'+row['nik']+'" data-nama="'+row['nama']+'" data-jenis_pindah="'+row['jenis_pindah']+'" data-skpwni="'+row['skpwni']+'" data-tgl_pindah="'+row['tgl_pindah']+'" data-alamat_rt="'+row['alamat_rt']+'" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td ><a style="margin-top:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td>';
                     }
                 },
                       ]
@@ -726,8 +726,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                 return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
-                            {"data": "rw"},
                             {"data": "rt"},
+                            {"data": "rw"},
                             {"data": "alamat_rt"},
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
@@ -804,8 +804,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                 return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
-                            {"data": "rw"},
                             {"data": "rt"},
+                            {"data": "rw"},
                             {"data": "alamat_rt"},
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
@@ -882,8 +882,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                 return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
-                            {"data": "rw"},
                             {"data": "rt"},
+                            {"data": "rw"},
                             {"data": "alamat_rt"},
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
@@ -893,7 +893,15 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                 }else{
                                   return '<span class="badge badge-warning">Pindah Keluar</span>';
                                 }
-                            }}
+                            }},
+                            {
+                    "data": "alamat_rt",
+                    render: function (data, type, row, meta) {
+                      //return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td></td>';
+                      // return '<td ><a style="margin-left:10px" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-danger hapus_record">Hapus</a></td><a style="margin-left:10px;margin-top:15px;" href="javascript:void(0);"  data-kode="'+row['id_perpindahan']+'" class="btn btn-warning batal_record">Batal Pindah</a></td>';
+                        return '<td><a href="javascript:void(0);" onclick="updateChar()" data-kecamatan="'+row['kecamatan']+'" data-kelurahan="'+row['kelurahan']+'" data-rw="'+row['rw']+'" data-rt="'+row['rt']+'" data-nik="'+row['nik']+'" data-nama="'+row['nama']+'" data-jenis_pindah="'+row['jenis_pindah']+'" data-skpwni="'+row['skpwni']+'" data-tgl_pindah="'+row['tgl_pindah']+'" data-alamat_rt="'+row['alamat_rt']+'" data-kode="'+row['id_perpindahan']+'" class="btn btn-primary edit_record">Ubah</a></td><td >';
+                    }
+                },
                       ]
                 });
             } );
@@ -960,8 +968,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                 return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
-                            {"data": "rw"},
                             {"data": "rt"},
+                            {"data": "rw"},
                             {"data": "alamat_rt"},
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
@@ -1038,8 +1046,8 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
                                 return sukun[kodesukun.indexOf(parseInt(data))];
                               }
                             }},
-                            {"data": "rw"},
                             {"data": "rt"},
+                            {"data": "rw"},                        
                             {"data": "alamat_rt"},
                             {"data": "tgl_pindah"},
                             {"data": "jenis_pindah",
@@ -1070,6 +1078,35 @@ if ($this->uri->segment(2) == "" || $this->uri->segment(2) == "index") { ?>
               console.log("Jalan");
               // updateChar();
               updateChar();
+                var id_perpindahan=$(this).data('kode');
+                var kecamatan=$(this).data('kecamatan');                               
+                var kelurahan=$(this).data('kelurahan');
+                var rw=$(this).data('rw');
+                var rt=$(this).data('rt');
+                var nik=$(this).data('nik');               
+                var nama=$(this).data('nama');
+                var jenis_pindah=$(this).data('jenis_pindah');
+                var skpwni=$(this).data('skpwni');               
+                var tgl_pindah=$(this).data('tgl_pindah');
+                var alamat_rt=$(this).data('alamat_rt');
+                $('#ModalUpdate').modal('show');
+                $('[name="id_perpindahan"]').val(id_perpindahan);
+                $('[name="kecamatan"]').val(kecamatan);
+                $('[name="kelurahan"]').val(kelurahan);
+                $('[name="rw"]').val(rw);
+                $('[name="rt"]').val(rt);
+                $('[name="nik"]').val(nik);
+                $('[name="nama"]').val(nama);
+                $('[name="jenis_pindah"]').val(jenis_pindah);
+                $('[name="skpwni"]').val(skpwni);
+                $('[name="tgl_pindah"]').val(tgl_pindah);
+                $('[name="alamat_rt"]').val(alamat_rt);
+          });
+
+          $('#table_id4').on('click','.edit_record',function(){
+              console.log("Jalan");
+              // updateChar();
+              //updateChar();
                 var id_perpindahan=$(this).data('kode');
                 var kecamatan=$(this).data('kecamatan');                               
                 var kelurahan=$(this).data('kelurahan');

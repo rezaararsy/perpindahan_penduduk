@@ -70,8 +70,8 @@ $this->load->view('dist/_partials/header1');
                             <th>Nama Penduduk</th>
                             <th>Kecamatan</th>
                             <th>Kelurahan</th>
-                            <th>RW</th>
                             <th>RT</th>
+                            <th>RW</th>
                             <th>Alamat di RT</th>
                             <th>Tgl Pindah</th>
                             <th>Jenis Perpindahan</th>
@@ -117,7 +117,7 @@ $this->load->view('dist/_partials/header1');
                     </div>
                     <div class="modal-body">
                       <input type="hidden" name="id_perpindahan" class="form-control" required>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label>Pilih Kecamatan</label>
                         <select required name="kecamatan" class="form-control" id="zoneSelect" onchange="updateChar()">
                           <option disabled selected value="">Pilih Kecamatan</option>
@@ -134,25 +134,29 @@ $this->load->view('dist/_partials/header1');
                         <option disabled selected value="">Pilih Kelurahan</option>
   
                         </select>
-                      </div>
+                      </div> -->
                       <div class="form-group">
-                        <label>Pilih RW</label>
+                        <!-- <label>Pilih RW</label>
                         <select required name="rw" class="form-control" id="rwnya">
                         <option disabled selected value="">Pilih RW</option>
   
-                        </select>
+                        </select> -->
+                        <label>Masukkan RT</label>
+                        <input required name="rt" type="number" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label>Pilih RT</label>
+                        <!-- <label>Pilih RT</label>
                         <select required name="rt" class="form-control" id="rtnya">
                         <option disabled selected value="">Pilih RT</option>
   
-                        </select>
+                        </select> -->
+                        <label>Masukkan RW</label>
+                        <input required name="rw" type="number" class="form-control">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label>NIK Penduduk Yang Pindah</label>
                         <input required name="nik" type="number" class="form-control">
-                      </div>
+                      </div> -->
                       <div class="form-group">
                         <label>Nama Penduduk Yang Pindah</label>
                         <input required name="nama" type="text" class="form-control">
