@@ -111,7 +111,7 @@ class Auth extends CI_Controller {
 		// 	$nama_user =  "$user_kecamatan $sukun[$kelurahanya] RW $rwnya RT $rtnya";
 		// }
 
-		if(rtnya==0){
+		if($rtnya==0||$data_sessionrtnya==null){
 			if($kecamatanya == 1){
 				$user_kecamatan = "Blimbing";
 				$nama_user =  "RW $rwnya";
